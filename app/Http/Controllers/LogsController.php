@@ -30,9 +30,9 @@ class LogsController extends Controller
 
     public function normal_tables()
     {
-        $logs = Logs::all(); // Make sure this is the correct query
+        $logs = Logs::all();
 
-        // Pass the logs to the view
+        // Pass the logs and user count to the view
         return view('normal-tables', compact('logs'));
     }
 
@@ -109,8 +109,10 @@ class LogsController extends Controller
             return redirect()->route('signup');
         }
 
+        $userCount = Logs::count();
+        $employCount = Employs::count();
         // Return view for the dashboard
-        return view('index');
+        return view('index', compact('userCount', 'employCount'));
     }
 
     // Logout function

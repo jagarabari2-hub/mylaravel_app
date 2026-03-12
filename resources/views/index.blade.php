@@ -11,10 +11,13 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css" />
     <link rel="stylesheet" href="assets/plugins/charts-c3/plugin.css" />
-
     <link rel="stylesheet" href="assets/plugins/morrisjs/morris.min.css" />
     <!-- Custom Css -->
     <link rel="stylesheet" href="assets/css/style.min.css">
+
+    {{-- Icons link And Others Links --}}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body class="theme-blush">
@@ -112,7 +115,8 @@
                             </li>
                             <li>
                                 <a href="javascript:void(0);">
-                                    <div class="icon-circle bg-amber"><i class="zmdi zmdi-shopping-cart"></i></div>
+                                    <div class="icon-circle bg-amber"><i class="zmdi zmdi-shopping-cart"></i>
+                                    </div>
                                     <div class="menu-info">
                                         <h4>4 Sales made</h4>
                                         <p><i class="zmdi zmdi-time"></i> 22 mins ago </p>
@@ -157,7 +161,8 @@
                             </li>
                             <li>
                                 <a href="javascript:void(0);">
-                                    <div class="icon-circle bg-light-blue"><i class="zmdi zmdi-settings"></i></div>
+                                    <div class="icon-circle bg-light-blue"><i class="zmdi zmdi-settings"></i>
+                                    </div>
                                     <div class="menu-info">
                                         <h4>Settings Updated</h4>
                                         <p><i class="zmdi zmdi-time"></i> Yesterday </p>
@@ -296,17 +301,15 @@
                 <li class="active open"><a href="index"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
                 </li>
                 <li><a href="javascript:void(0);" class="menu-toggle"><i
-                            class="zmdi zmdi-apps"></i><span>App</span></a>
+                            class="bi bi-person-workspace"></i><span>Employees</span></a>
                     <ul class="ml-menu">
-                        <li><a href="mail-inbox">Email</a></li>
-                        <li><a href="chat">Chat Apps</a></li>
-                        <li><a href="events">Calendar</a></li>
-                        <li><a href="contact">Contact</a></li>
+                        <li><a href="{{ route('index2') }}">index</a></li>
                     </ul>
                 </li>
                 <li> <a href="javascript:void(0);" class="menu-toggle"><i
-                            class="zmdi zmdi-assignment"></i><span>Projects</span></a>
+                            class="bi bi-people-fill"></i><span>Users</span></a>
                     <ul class="ml-menu">
+                        <li><a href="{{ route('normal-tables') }}">index</a></li>
                         <li><a href="project-list">Projects List</a></li>
                         <li><a href="taskboard">Taskboard</a></li>
                         <li><a href="ticket-list">Ticket List</a></li>
@@ -567,7 +570,8 @@
                                         <div class="media-body">
                                             <span class="name">Sophia <small
                                                     class="float-right">11:00AM</small></span>
-                                            <span class="message">There are many variations of passages of Lorem Ipsum
+                                            <span class="message">There are many variations of passages of Lorem
+                                                Ipsum
                                                 available</span>
                                             <span class="badge badge-outline status"></span>
                                         </div>
@@ -607,7 +611,8 @@
                                         <div class="media-body">
                                             <span class="name">John <small
                                                     class="float-right">05:00PM</small></span>
-                                            <span class="message">It is a long established fact that a reader</span>
+                                            <span class="message">It is a long established fact that a
+                                                reader</span>
                                             <span class="badge badge-outline status"></span>
                                         </div>
                                     </div>
@@ -661,8 +666,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card widget_2 big_icon traffic">
                             <div class="body">
-                                <h6>Traffic</h6>
-                                <h2>20 <small class="info">of 1Tb</small></h2>
+                                <h6>TOTAL USERS</h6>
+                                <h2>{{ $userCount }} <small class="info">Of All</small></h2>
                                 <small>2% higher than last month</small>
                                 <div class="progress">
                                     <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45"
@@ -674,8 +679,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card widget_2 big_icon sales">
                             <div class="body">
-                                <h6>Sales</h6>
-                                <h2>12% <small class="info">of 100</small></h2>
+                                <h6>TOTAL EMPLOYEES</h6>
+                                <h2>{{ $employCount }} <small class="info">Of All</small></h2>
                                 <small>6% higher than last month</small>
                                 <div class="progress">
                                     <div class="progress-bar l-blue" role="progressbar" aria-valuenow="38"
@@ -900,7 +905,8 @@
                                             <ul class="list-unstyled chat_info">
                                                 <li><small>11:15AM</small></li>
                                                 <li><span class="message">Hello, Hossein</span></li>
-                                                <li><span class="message">Meeting on conference room at 12:00PM</span>
+                                                <li><span class="message">Meeting on conference room at
+                                                        12:00PM</span>
                                                 </li>
                                             </ul>
                                         </li>
@@ -1004,7 +1010,8 @@
                                         <div id="chart-area-step" class="c3_chart d_traffic"></div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-sm-12">
-                                        <span> More than 30% percent of users come from direct links. Check details page
+                                        <span> More than 30% percent of users come from direct links. Check details
+                                            page
                                             for more information.</span>
                                         <div class="progress mt-4">
                                             <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45"
@@ -1012,7 +1019,8 @@
                                         </div>
                                         <div class="d-flex bd-highlight mt-4">
                                             <div class="flex-fill bd-highlight">
-                                                <h5 class="mb-0">21,521 <i class="zmdi zmdi-long-arrow-up"></i></h5>
+                                                <h5 class="mb-0">21,521 <i class="zmdi zmdi-long-arrow-up"></i>
+                                                </h5>
                                                 <small>Today</small>
                                             </div>
                                             <div class="flex-fill bd-highlight">
