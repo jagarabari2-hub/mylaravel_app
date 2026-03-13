@@ -84,7 +84,7 @@ class EmploysController extends Controller
      */
     public function edit(Employs $employs)
     {
-        //
+        return view('employ.edit', compact('employs'));
     }
 
     /**
@@ -92,7 +92,14 @@ class EmploysController extends Controller
      */
     public function update(Request $request, Employs $employs)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'depart' => 'required|string|max:255',
+            'phone' => 'required|regex:/^\d{10}$/'
+        ]);
+
+        $employs->update($validated);
+        return redirect('index2')->with('success', 'Employees Successfully Updated');
     }
 
     /**

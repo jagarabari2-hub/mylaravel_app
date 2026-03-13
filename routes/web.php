@@ -55,5 +55,8 @@ Route::resource('employ', EmploysController::class);
 Route::post('employ/store', [EmploysController::class, 'store'])->name('employ.store');
 Route::get('/employ', [EmploysController::class, 'employ'])->name('employ.index');
 Route::get('/employ/create', [EmploysController::class, 'create'])->name('employ.create');
+Route::get('/employ/{id}/edit', [EmploysController::class, 'edit'])->name('employ.edit');
+Route::put('/employ/{id}', [EmploysController::class, 'update'])->name('employ.update');
+Route::delete('/employ/{id}', [EmploysController::class, 'destroy'])->name('employ.destroy');
 Route::get('/employ/{id}', [EmploysController::class, 'show'])->name('employ.show');
 Route::get('/index2', [EmploysController::class, 'index'])->name('index2');
