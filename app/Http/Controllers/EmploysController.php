@@ -3,28 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employs;
+use App\Models\Depts;
+use App\Models\Logs;
 use Illuminate\Http\Request;
 
 class EmploysController extends Controller
 {
-    /**
-     * Show the requested page dynamically based on the URL.
-     *
-     * @param  string  $page
-     * @return \Illuminate\Views\Views
-     */
-    public function showPage($page)
-    {
-        $employs = Employs::all();
-        // Check if the view exists in resources/views
-        if (view()->exists($page)) {
-            return view($page, compact('employs')); // Render the page if the view exists
-        }
-
-        // If the view doesn't exist, show a 404 error page
-        return view('404'); // Make sure you have a 404.blade.php in the resources/views/ directory
-    }
-
     public function employ()
     {
         return view('employ.index');
@@ -34,10 +18,7 @@ class EmploysController extends Controller
      */
     public function index()
     {
-        dd('Index method is being called');
-
         $employs = Employs::all();
-
 
         return view('index2', compact('employs'));
     }
@@ -82,31 +63,41 @@ class EmploysController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Employs $employs)
+    public function edit(Employs $employs, $id)
     {
+        // dd($employs);
+        $employs = Employs::find($id);
         return view('employ.edit', compact('employs'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Employs $employs)
+    public function update(Request $request, Employs $employs,$id)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'depart' => 'required|string|max:255',
-            'phone' => 'required|regex:/^\d{10}$/'
-        ]);
+        $employ = Employs::find($id);
 
-        $employs->update($validated);
-        return redirect('index2')->with('success', 'Employees Successfully Updated');
-    }
+        if (!$employ) {
+            return redirect()->back()->with('error', 'Record not found');
+        }
+
+        $employ->name = $request->name;
+        $employ->depart = $request->depart;
+        $employ->phone = $request->phone;
+
+        $employ->save(); // ⚠️ MUST HAVE THIS
+
+        return redirect('index2')->with('success', 'Updated successfully');
+    }   
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Employs $employs)
+    public function destroy(Employs $employ)
     {
-        //
+        $employ->delete();
+    
+        return redirect()->route('index2')
+            ->with('success', 'Deleted successfully');
     }
 }

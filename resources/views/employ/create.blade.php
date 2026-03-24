@@ -671,20 +671,6 @@
                             <div class="card">
                                 <div class="header">
                                     <h2><strong>Employees </strong> ADD</h2>
-                                    {{-- <ul class="header-dropdown">
-                                        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle"
-                                                data-toggle="dropdown" role="button" aria-haspopup="true"
-                                                aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li><a href="javascript:void(0);">Action</a></li>
-                                                <li><a href="javascript:void(0);">Another action</a></li>
-                                                <li><a href="javascript:void(0);">Something else</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="remove">
-                                            <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                                        </li>
-                                    </ul> --}}
                                 </div>
                                 <div class="body">
                                     <form class="form-horizontal" action="{{ route('employ.store') }}"
@@ -788,42 +774,9 @@
     <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.flash.min.js') }} "></script>
     <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons5.min.js') }} "></script>
     <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.print.min.js') }} "></script>
-    <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }} "></script><!-- Custom Js -->
+    <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }} "></script>
+    <!-- Custom Js -->
     <script src="{{ asset('assets/js/pages/tables/jquery-datatable.js') }} "></script>
-    <script>
-        $(document).ready(function() {
-            $('#employeeForm').submit(function(event) {
-                event.preventDefault(); // Prevent default form submission
-
-                // Clear previous messages
-                $('#successMessage').hide();
-                $('#errorMessage').hide();
-                $('#formMessages').show();
-
-                // Perform AJAX request
-                $.ajax({
-                    url: $(this).attr('action'),
-                    method: $(this).attr('method'),
-                    data: $(this).serialize(),
-                    success: function(response) {
-                        // Show success message
-                        $('#successMessage').text('Employee added successfully!').show();
-
-                        // Clear form fields
-                        $('#employeeForm')[0].reset();
-                    },
-                    error: function(xhr, status, error) {
-                        // Show error message
-                        var errorMessage = 'An error occurred. Please try again later.';
-                        if (xhr.responseJSON && xhr.responseJSON.message) {
-                            errorMessage = xhr.responseJSON.message;
-                        }
-                        $('#errorMessage').text(errorMessage).show();
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 
 

@@ -17,7 +17,7 @@
 
     {{-- Icons link And Others Links --}}
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 </head>
 
 <body class="theme-blush">
@@ -291,9 +291,9 @@
             <ul class="list">
                 <li>
                     <div class="user-info">
-                        <a class="image" href="profile"><img src="assets/images/profile_av.jpg" alt="User"></a>
+                        <a class="image" href="profile"><img src="assets/images/unnamed.jpg" alt="User"></a>
                         <div class="detail">
-                            <h4>Michael</h4>
+                            <h4>JAGA RABARI</h4>
                             <small>Super Admin</small>
                         </div>
                     </div>
@@ -301,24 +301,28 @@
                 <li class="active open"><a href="index"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
                 </li>
                 <li><a href="javascript:void(0);" class="menu-toggle"><i
-                            class="bi bi-person-workspace"></i><span>Employees</span></a>
+                            class="fa-solid fa-address-card"></i><span>Employees</span></a>
                     <ul class="ml-menu">
-                        <li><a href="{{ route('index2') }}">index</a></li>
+                        <li><a href="{{ route('index2') }}">Index</a></li>
+                        <li><a href="chat">Chat Apps</a></li>
+                        <li><a href="events">Calendar</a></li>
+                        <li><a href="contact">Contact</a></li>
                     </ul>
                 </li>
                 <li> <a href="javascript:void(0);" class="menu-toggle"><i
-                            class="bi bi-people-fill"></i><span>Users</span></a>
+                            class="fa-solid fa-users"></i><span>Users</span></a>
                     <ul class="ml-menu">
-                        <li><a href="{{ route('normal-tables') }}">index</a></li>
+                        <li><a href="normal-tables">Index</a></li>
                         <li><a href="project-list">Projects List</a></li>
                         <li><a href="taskboard">Taskboard</a></li>
                         <li><a href="ticket-list">Ticket List</a></li>
                         <li><a href="ticket-detail">Ticket Detail</a></li>
                     </ul>
                 </li>
-                <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-folder"></i><span>File
-                            Manager</span></a>
+                <li> <a href="javascript:void(0);" class="menu-toggle"><i
+                            class="fa-solid fa-sitemap"></i><span>Departments</span></a>
                     <ul class="ml-menu">
+                        <li><a href="{{ route('index3') }}">Index3</a></li>
                         <li><a href="file-dashboard">All File</a></li>
                         <li><a href="file-documents">Documents</a></li>
                         <li><a href="file-images">Images</a></li>
@@ -664,22 +668,26 @@
             <div class="container-fluid">
                 <div class="row clearfix">
                     <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card widget_2 big_icon traffic">
+                        <div class="card widget_2">
                             <div class="body">
-                                <h6>TOTAL USERS</h6>
+                                <h6>TOTAL USERS <i class="fa-solid fa-users j_ho"
+                                        style="color: #e47297;scale: 2.1;margin-left: 70px;margin-bottom: .5rem;"></i>
+                                </h6>
                                 <h2>{{ $userCount }} <small class="info">Of All</small></h2>
-                                <small>2% higher than last month</small>
+                                <small>12% higher than last month</small>
                                 <div class="progress">
                                     <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                                        aria-valuemin="70" aria-valuemax="100" style="width: 45%;"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card widget_2 big_icon sales">
+                        <div class="card widget_2">
                             <div class="body">
-                                <h6>TOTAL EMPLOYEES</h6>
+                                <h6>TOTAL EMPLOYEES <i class="fa-solid fa-address-card j_ho"
+                                        style="color: #e47297;scale: 2.1;margin-left: 40px;margin-bottom: .5rem;"></i>
+                                </h6>
                                 <h2>{{ $employCount }} <small class="info">Of All</small></h2>
                                 <small>6% higher than last month</small>
                                 <div class="progress">
@@ -690,11 +698,13 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card widget_2 big_icon email">
+                        <div class="card widget_2">
                             <div class="body">
-                                <h6>Email</h6>
-                                <h2>39 <small class="info">of 100</small></h2>
-                                <small>Total Registered email</small>
+                                <h6>TOTAL DEPARTMENTS <i class="fa-solid fa-sitemap j_ho"
+                                        style="color: #e47297;scale: 2.1;margin-left: 23px;margin-bottom: .5rem;"></i>
+                                </h6>
+                                <h2>{{ $deptsCount }} <small class="info">of All</small></h2>
+                                <small>8% higher than last month</small>
                                 <div class="progress">
                                     <div class="progress-bar l-purple" role="progressbar" aria-valuenow="39"
                                         aria-valuemin="0" aria-valuemax="100" style="width: 39%;"></div>
@@ -703,9 +713,11 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card widget_2 big_icon domains">
+                        <div class="card widget_2">
                             <div class="body">
-                                <h6>Domains</h6>
+                                <h6>Domains <i class="fa-brands fa-w3c j_ho"
+                                        style="color: #e47297;scale: 2.1;margin-left: 100px;margin-bottom: .5rem;"></i>
+                                </h6>
                                 <h2>8 <small class="info">of 10</small></h2>
                                 <small>Total Registered Domain</small>
                                 <div class="progress">

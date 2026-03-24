@@ -8503,6 +8503,9 @@ img {
 .ti-rss-alt:before {
     content: "\e75f";
 }
+.j_ho:hover {
+    scale: 3.5;
+}
 body {
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;

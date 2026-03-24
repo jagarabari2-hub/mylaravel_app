@@ -4,30 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Logs;
 use App\Models\Employs;
+use App\Models\Depts;
 use Illuminate\Support\Facades\Hash;
 use \Illuminate\Views\Views;
 use Illuminate\Http\Request;
 
 class LogsController extends Controller
 {
-    /**
-     * Show the requested page dynamically based on the URL.
-     *
-     * @param  string  $page
-     * @return \Illuminate\Views\Views
-     */
-    public function showPage($page)
-    {
-        $employs = Employs::all();
-        // Check if the view exists in resources/views
-        if (view()->exists($page)) {
-            return view($page, compact('employs')); // Render the page if the view exists
-        }
-
-        // If the view doesn't exist, show a 404 error page
-        return view('404'); // Make sure you have a 404.blade.php in the resources/views/ directory
-    }
-
     public function normal_tables()
     {
         $logs = Logs::all();
@@ -111,8 +94,9 @@ class LogsController extends Controller
 
         $userCount = Logs::count();
         $employCount = Employs::count();
+        $deptsCount = Depts::count();
         // Return view for the dashboard
-        return view('index', compact('userCount', 'employCount'));
+        return view('index', compact('userCount', 'employCount', 'deptsCount'));
     }
 
     // Logout function

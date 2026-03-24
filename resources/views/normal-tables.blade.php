@@ -283,8 +283,7 @@
             <ul class="list">
                 <li>
                     <div class="user-info">
-                        <a class="image" href="profile"><img src="assets/images/profile_av.jpg"
-                                alt="User"></a>
+                        <a class="image" href="profile"><img src="assets/images/profile_av.jpg" alt="User"></a>
                         <div class="detail">
                             <h4>Michael</h4>
                             <small>Super Admin</small>

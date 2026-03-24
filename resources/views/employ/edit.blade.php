@@ -687,30 +687,33 @@
                                     </ul> --}}
                                 </div>
                                 <div class="body">
-                                    <form class="form-horizontal" action="{{ route('employ.update') }}"
+                                    <form class="form-horizontal" action="{{ route('employ.update', $employs->id) }}"
                                         method="POST" id="employeeForm">
                                         @csrf
+                                        @method('PUT')
                                         <div class="row">
                                             <div class="col">
                                                 <!-- Success/Error Message Container -->
-                                                <div id="formMessages"
-                                                    class="alert alert-success alert-dismissible fade show"
-                                                    role="alert">
-                                                    <strong>SUCCESS !</strong>
-                                                    <button type="button" class="close" data-dismiss="alert"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div id="errorMessage"
-                                                    class="alert alert-danger alert-dismissible fade show"
-                                                    role="alert">
-                                                    <strong>ERROR !</strong>
-                                                    <button type="button" class="close" data-dismiss="alert"
-                                                        aria-label="Close">
-
-                                                    </button>
-                                                </div>
+                                                @if (session('success'))
+                                                    <div class="alert alert-success alert-dismissible fade show"
+                                                        role="alert">
+                                                        <strong>SUCCESS!</strong> {{ session('success') }}
+                                                        <button type="button" class="close" data-dismiss="alert"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                @endif
+                                                @if (session('error'))
+                                                    <div class="alert alert-danger alert-dismissible fade show"
+                                                        role="alert">
+                                                        <strong>ERROR!</strong> {{ session('error') }}
+                                                        <button type="button" class="close" data-dismiss="alert"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                @endif
                                             </div>
                                         </div>
                                         <div class="row clearfix">
@@ -720,7 +723,8 @@
                                             <div class="col-lg-10 col-md-10 col-sm-8">
                                                 <div class="form-group">
                                                     <input type="text" name="name" id="name"
-                                                        class="form-control @error('name') is-invalid @enderror" value="{{ old('name', $employs->name) }}"
+                                                        class="form-control @error('name') is-invalid @enderror"
+                                                        value="{{ old('name', $employs->name) }}"
                                                         placeholder="Enter your Name" required>
                                                     @error('name')
                                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -736,7 +740,8 @@
                                             <div class="col-lg-10 col-md-10 col-sm-8">
                                                 <div class="form-group">
                                                     <input type="text" name="depart" id="dep"
-                                                        class="form-control @error('depart') is-invalid @enderror" value="{{ old('depart', $employs->depart) }}"
+                                                        class="form-control @error('depart') is-invalid @enderror"
+                                                        value="{{ old('depart', $employs->depart) }}"
                                                         placeholder="Enter your Department" required>
                                                     @error('depart')
                                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -752,7 +757,8 @@
                                             <div class="col-lg-10 col-md-10 col-sm-8">
                                                 <div class="form-group">
                                                     <input type="text" name="phone" id="phone"
-                                                        class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone', $employs->phone) }}"
+                                                        class="form-control @error('phone') is-invalid @enderror"
+                                                        value="{{ old('phone', $employs->phone) }}"
                                                         placeholder="Enter your Phone" required>
                                                     @error('phone')
                                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -760,10 +766,8 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="col-sm-12 offset-sm-2">
-                                            <button type="submit"
-                                                class="btn btn-raised btn-primary btn-round waves-effect">EDIT</button>
+                                            <input type="submit" class="btn btn-primary" value="EDIT">
                                         </div>
                                     </form>
 
