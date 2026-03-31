@@ -28,13 +28,6 @@
     <section class="content contact">
 
         <!-- Page Loader -->
-        <div class="page-loader-wrapper">
-            <div class="loader">
-                <div class="m-t-30"><img class="zmdi-hc-spin" src="assets/images/loader.svg" width="48"
-                        height="48" alt="Aero"></div>
-                <p>Please wait...</p>
-            </div>
-        </div>
 
         <!-- Overlay For Sidebars -->
         <div class="overlay"></div>
@@ -308,41 +301,41 @@
                     <li><a href="index"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="bi bi-people-fill"></i><span>Users</span></a>
-                        <ul class="ml-menu">
-                            <li><a href="{{ route('logs.index') }}">Index</a></li>
-                            <li><a href="taskboard">Taskboard</a></li>
-                            <li><a href="ticket-list">Ticket List</a></li>
-                            <li><a href="ticket-detail">Ticket Detail</a></li>
-                        </ul>
+                        {{-- <ul class="ml-menu"> --}}
+                    <li><a href="http://127.0.0.1:8000/logs">Index</a></li>
+                    <li><a href="taskboard">Taskboard</a></li>
+                    <li><a href="ticket-list">Ticket List</a></li>
+                    <li><a href="ticket-detail">Ticket Detail</a></li>
+                    {{-- </ul> --}}
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="bi bi-person-workspace"></i><span>Employees</span></a>
-                        <ul class="ml-menu">
-                            <li><a href="{{ route('employ.index') }}">Index</a></li>
-                            <li><a href="chat">Chat Apps</a></li>
-                            <li><a href="events">Calendar</a></li>
-                            <li><a href="contact">Contact</a></li>
-                        </ul>
+                        {{-- <ul class="ml-menu"> --}}
+                    <li><a href="http://127.0.0.1:8000/employ">Index</a></li>
+                    <li><a href="chat">Chat Apps</a></li>
+                    <li><a href="events">Calendar</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    {{-- </ul> --}}
                     </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="fa-solid fa-sitemap"></i><span>Departments</span></a>
-                        <ul class="ml-menu">
-                            <li><a href="{{ route('dep.index') }}">Index</a></li>
-                            <li><a href="file-dashboard">All File</a></li>
-                            <li><a href="file-documents">Documents</a></li>
-                            <li><a href="file-images">Images</a></li>
-                            <li><a href="file-media">Media</a></li>
-                        </ul>
+                        {{-- <ul class="ml-menu"> --}}
+                    <li><a href="http://127.0.0.1:8000/dep">Index</a></li>+
+                    <li><a href="file-dashboard">All File</a></li>
+                    <li><a href="file-documents">Documents</a></li>
+                    <li><a href="file-images">Images</a></li>
+                    <li><a href="file-media">Media</a></li>
+                    {{-- </ul> --}}
                     </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-blogger"></i><span>Blog</span></a>
-                        <ul class="ml-menu">
-                            <li><a href="blog-dashboard">Dashboard</a></li>
-                            <li><a href="blog-post">Blog Post</a></li>
-                            <li><a href="blog-list">List View</a></li>
-                            <li><a href="blog-grid">Grid View</a></li>
-                            <li><a href="blog-details">Blog Details</a></li>
-                        </ul>
+                        {{-- <ul class="ml-menu"> --}}
+                    <li><a href="blog-dashboard">Dashboard</a></li>
+                    <li><a href="blog-post">Blog Post</a></li>
+                    <li><a href="blog-list">List View</a></li>
+                    <li><a href="blog-grid">Grid View</a></li>
+                    <li><a href="blog-details">Blog Details</a></li>
+                    {{-- </ul> --}}
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span></a>
@@ -722,16 +715,9 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 p-2">
-                                    <nav aria-label="Page navigation example">
-                                        <ul class="pagination justify-content-end">
-                                            <li class="page-item"><a class="page-link" href="#">Previous</a>
-                                            </li>
-                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                        </ul>
-                                    </nav>
+                                    <div class="d-flex justify-content-end mt-3">
+                                        {{ $employs->links() }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -740,20 +726,23 @@
             </div>
     </section>
 
-    <!-- Jquery Core Js -->
-    <script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
-    <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
-
-    <!-- Jquery DataTable Plugin Js -->
-    <script src="assets/bundles/datatablescripts.bundle.js"></script>
-    <script src="assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js"></script>
-    <script src="assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js"></script>
-    <script src="assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js"></script>
-    <script src="assets/plugins/jquery-datatable/buttons/buttons.flash.min.js"></script>
-    <script src="assets/plugins/jquery-datatable/buttons/buttons5.min.js"></script>
-    <script src="assets/plugins/jquery-datatable/buttons/buttons.print.min.js"></script>
-
-    <script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
+    <script src="{{ asset('assets/bundles/datatablescripts.bundle.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.flash.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons5.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }}"></script><!-- Custom Js -->
+    <script src="{{ asset('assets/js/pages/tables/jquery-datatable.js') }}"></script>
+    <script>
+        window.onload = function() {
+            var loader = document.getElementById("loading");
+            if (loader) {
+                loader.style.display = "none";
+            }
+        };
+    </script>
 
 </body>
 

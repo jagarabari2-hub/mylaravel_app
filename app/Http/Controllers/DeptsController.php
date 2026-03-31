@@ -15,15 +15,6 @@ class DeptsController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        $depts = Depts::paginate(10);
-        return view('index3', compact('depts'));
-    }
-
-    /**
      * Show the form for creating a new resource.
      */
     public function create()
@@ -46,7 +37,7 @@ class DeptsController extends Controller
 
         Depts::create($validated);
 
-        return redirect()->route('index3')->with('success', 'Department Created Successfully');  
+        return redirect()->route('dep.index')->with('success', 'Department Created Successfully');  
     }
 
     /**
@@ -83,7 +74,7 @@ class DeptsController extends Controller
         $depts = Depts::findOrFail($id); 
         $depts->update($validated);      
 
-        return redirect()->route('index3')->with('success', 'Department Updated Successfully');
+        return redirect()->route('dep.index')->with('success', 'Department Updated Successfully');
     }
 
     /**
@@ -92,6 +83,6 @@ class DeptsController extends Controller
     public function destroy(Depts $depts, $id)
     {
         $depts->destroy($id);
-        return redirect()->route('index3')->with('success', 'Department Delete Successfully');
+        return redirect()->route('dep.index')->with('success', 'Department Delete Successfully');
     }
 }

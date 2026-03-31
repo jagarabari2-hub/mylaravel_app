@@ -22,15 +22,6 @@
 
     <section class="content">
 
-        <!-- Page Loader -->
-        <div class="page-loader-wrapper">
-            <div class="loader">
-                <div class="m-t-30"><img class="zmdi-hc-spin" src="{{ asset('assets/images/loader.svg') }} "
-                        width="48" height="48" alt="Aero"></div>
-                <p>Please wait...</p>
-            </div>
-        </div>
-
         <!-- Overlay For Sidebars -->
         <div class="overlay"></div>
 
@@ -785,21 +776,23 @@
             </div>
     </section>
 
-    <!-- Jquery Core Js -->
-    <script src="{{ asset('assets/bundles/libscripts.bundle.js') }} "></script> <!-- Lib Scripts Plugin Js -->
-    <script src="{{ asset('assets/bundles/vendorscripts.bundle.js') }} "></script> <!-- Lib Scripts Plugin Js -->
-
-
-    <script src="{{ asset('assets/bundles/datatablescripts.bundle.js') }} "></script>
-    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js') }} "></script>
-    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js') }} "></script>
-    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js') }} "></script>
-    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.flash.min.js') }} "></script>
-    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons5.min.js') }} "></script>
-    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.print.min.js') }} "></script>
-    <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }} "></script>
-    <!-- Custom Js -->
-    <script src="{{ asset('assets/js/pages/tables/jquery-datatable.js') }} "></script>
+    <script src="{{ asset('assets/bundles/datatablescripts.bundle.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.flash.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons5.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }}"></script><!-- Custom Js -->
+    <script src="{{ asset('assets/js/pages/tables/jquery-datatable.js') }}"></script>
+    <script>
+        window.onload = function() {
+            var loader = document.getElementById("loading");
+            if (loader) {
+                loader.style.display = "none";
+            }
+        };
+    </script>
 </body>
 
 

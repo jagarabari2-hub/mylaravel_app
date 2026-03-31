@@ -12,17 +12,8 @@ class EmploysController extends Controller
 {
     public function employ()
     {
-        $employs = Employs::Paginate(10);
+        $employs = Employs::paginate(10);
         return view('employ.index', compact('employs'));
-    }
-
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        $employs = Employs::Paginate(10);
-        return view('index2', compact('employs'));
     }
 
     /**
@@ -50,7 +41,7 @@ class EmploysController extends Controller
 
 
         // Return a response indicating success
-        return redirect('index2')->with('success', 'Resource Successfully Created');
+        return redirect()->route('employ.index')->with('success', 'Resource Successfully Created');
     }
 
     /**
@@ -89,7 +80,7 @@ class EmploysController extends Controller
 
         $employ->save(); // ⚠️ MUST HAVE THIS
 
-        return redirect('index2')->with('success', 'Updated successfully');
+        return redirect()->route('employ.index')->with('success', 'Updated successfully');
     }   
 
     /**
@@ -99,7 +90,7 @@ class EmploysController extends Controller
     {
         $employ->delete();
     
-        return redirect()->route('index2')
+        return redirect()->route('employ.index')
             ->with('success', 'Deleted successfully');
     }
 }
