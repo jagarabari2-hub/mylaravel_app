@@ -8800,6 +8800,11 @@ section.content {
         table-layout: auto;
     }
 }
+
+.t-body-hov-eff:hover {
+    background-color: #f5f5f5;
+}
+
 .search_page td,
 .search_page th {
     white-space: nowrap;

@@ -8,25 +8,29 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-    <title>:: Aero Bootstrap4 Admin :: SHOW</title>
+    <title>:: Aero Bootstrap4 Admin :: INDEX3</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Favicon-->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }} ">
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <!-- JQuery DataTable Css -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css') }} ">
+    <link rel="stylesheet" href="assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css">
     <!-- Custom Css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }} ">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    {{-- Icons link And Others Links --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+    {{-- Icons link And Others Links --}}
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 </head>
 
 <body class="theme-blush">
 
-    <section class="content">
-
+    <section class="content contact">
         <!-- Page Loader -->
         <div class="page-loader-wrapper">
             <div class="loader">
-                <div class="m-t-30"><img class="zmdi-hc-spin" src="{{ asset('assets/images/loader.svg') }} "
-                        width="48" height="48" alt="Aero"></div>
+                <div class="m-t-30"><img class="zmdi-hc-spin" src="assets/images/loader.svg" width="48"
+                        height="48" alt="Aero"></div>
                 <p>Please wait...</p>
             </div>
         </div>
@@ -56,7 +60,7 @@
                         <li class="body">
                             <ul class="menu app_sortcut list-unstyled">
                                 <li>
-                                    <a href="http://127.0.0.1:8000/image-gallery">
+                                    <a href="image-gallery">
                                         <div class="icon-circle mb-2 bg-blue"><i class="zmdi zmdi-camera"></i></div>
                                         <p class="mb-0">Photos</p>
                                     </a>
@@ -68,13 +72,13 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="http://127.0.0.1:8000/events">
+                                    <a href="events">
                                         <div class="icon-circle mb-2 bg-green"><i class="zmdi zmdi-calendar"></i></div>
                                         <p class="mb-0">Calendar</p>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="http://127.0.0.1:8000/contact">
+                                    <a href="contact">
                                         <div class="icon-circle mb-2 bg-purple"><i
                                                 class="zmdi zmdi-account-calendar"></i>
                                         </div>
@@ -117,7 +121,8 @@
                                 </li>
                                 <li>
                                     <a href="javascript:void(0);">
-                                        <div class="icon-circle bg-amber"><i class="zmdi zmdi-shopping-cart"></i></div>
+                                        <div class="icon-circle bg-amber"><i class="zmdi zmdi-shopping-cart"></i>
+                                        </div>
                                         <div class="menu-info">
                                             <h4>4 Sales made</h4>
                                             <p><i class="zmdi zmdi-time"></i> 22 mins ago </p>
@@ -172,8 +177,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="footer"> <a href="javascript:void(0);">View All
-                                Notifications</a> </li>
+                        <li class="footer"> <a href="javascript:void(0);">View All Notifications</a> </li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -199,16 +203,13 @@
                                         <ul class="list-unstyled team-info">
                                             <li class="m-r-15"><small>Team</small></li>
                                             <li>
-                                                <img src="{{ asset('assets/images/xs/avatar2.jpg') }} "
-                                                    alt="Avatar">
+                                                <img src="assets/images/xs/avatar2.jpg" alt="Avatar">
                                             </li>
                                             <li>
-                                                <img src="{{ asset('assets/images/xs/avatar3.jpg') }} "
-                                                    alt="Avatar">
+                                                <img src="assets/images/xs/avatar3.jpg" alt="Avatar">
                                             </li>
                                             <li>
-                                                <img src="{{ asset('assets/images/xs/avatar4.jpg') }} "
-                                                    alt="Avatar">
+                                                <img src="assets/images/xs/avatar4.jpg" alt="Avatar">
                                             </li>
                                         </ul>
                                     </div>
@@ -226,24 +227,19 @@
                                         <ul class="list-unstyled team-info">
                                             <li class="m-r-15"><small>Team</small></li>
                                             <li>
-                                                <img src="{{ asset('assets/images/xs/avatar10.jpg') }} "
-                                                    alt="Avatar">
+                                                <img src="assets/images/xs/avatar10.jpg" alt="Avatar">
                                             </li>
                                             <li>
-                                                <img src="{{ asset('assets/images/xs/avatar9.jpg') }} "
-                                                    alt="Avatar">
+                                                <img src="assets/images/xs/avatar9.jpg" alt="Avatar">
                                             </li>
                                             <li>
-                                                <img src="{{ asset('assets/images/xs/avatar8.jpg') }} "
-                                                    alt="Avatar">
+                                                <img src="assets/images/xs/avatar8.jpg" alt="Avatar">
                                             </li>
                                             <li>
-                                                <img src="{{ asset('assets/images/xs/avatar7.jpg') }} "
-                                                    alt="Avatar">
+                                                <img src="assets/images/xs/avatar7.jpg" alt="Avatar">
                                             </li>
                                             <li>
-                                                <img src="{{ asset('assets/images/xs/avatar6.jpg') }} "
-                                                    alt="Avatar">
+                                                <img src="assets/images/xs/avatar6.jpg" alt="Avatar">
                                             </li>
                                         </ul>
                                     </div>
@@ -261,16 +257,13 @@
                                         <ul class="list-unstyled team-info">
                                             <li class="m-r-15"><small>Team</small></li>
                                             <li>
-                                                <img src="{{ asset('assets/images/xs/avatar5.jpg') }} "
-                                                    alt="Avatar">
+                                                <img src="assets/images/xs/avatar5.jpg" alt="Avatar">
                                             </li>
                                             <li>
-                                                <img src="{{ asset('assets/images/xs/avatar2.jpg') }} "
-                                                    alt="Avatar">
+                                                <img src="assets/images/xs/avatar2.jpg" alt="Avatar">
                                             </li>
                                             <li>
-                                                <img src="{{ asset('assets/images/xs/avatar7.jpg') }} "
-                                                    alt="Avatar">
+                                                <img src="assets/images/xs/avatar7.jpg" alt="Avatar">
                                             </li>
                                         </ul>
                                     </div>
@@ -287,8 +280,7 @@
                             class="zmdi zmdi-group-work"></i></a></li>
                 <li><a href="javascript:void(0);" class="js-right-sidebar" title="Setting"><i
                             class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
-                <li><a href="http://127.0.0.1:8000/sign-in" class="mega-menu" title="Sign Out"><i
-                            class="zmdi zmdi-power"></i></a>
+                <li><a href="sign-in" class="mega-menu" title="Sign Out"><i class="zmdi zmdi-power"></i></a>
                 </li>
             </ul>
         </div>
@@ -297,169 +289,168 @@
         <aside id="leftsidebar" class="sidebar">
             <div class="navbar-brand">
                 <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-                <a href="http://127.0.0.1:8000/index"><img src="{{ asset('assets/images/logo.svg') }} "
-                        width="25" alt="Aero"><span class="m-l-10">Aero</span></a>
+                <a href="index"><img src="assets/images/logo.svg" width="25" alt="Aero"><span
+                        class="m-l-10">Aero</span></a>
             </div>
             <div class="menu">
                 <ul class="list">
                     <li>
                         <div class="user-info">
-                            <a class="image" href="profile"><img src="{{ asset('assets/images/profile_av.jpg') }} "
+                            <a class="image" href="profile"><img src="assets/images/unnamed.jpg"
                                     alt="User"></a>
                             <div class="detail">
-                                <h4>Michael</h4>
+                                <h4>JAGA RABARI</h4>
                                 <small>Super Admin</small>
                             </div>
                         </div>
                     </li>
-                    <li><a href="http://127.0.0.1:8000/index"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
+                    <li><a href="index"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+                    <li> <a href="javascript:void(0);" class="menu-toggle"><i
+                                class="fa-solid fa-users"></i><span>Users</span></a>
+                        <ul class="ml-menu">
+                            <li><a href="{{ route('logs.index') }}">Index</a></li>
+                            <li><a href="taskboard">Taskboard</a></li>
+                            <li><a href="ticket-list">Ticket List</a></li>
+                            <li><a href="ticket-detail">Ticket Detail</a></li>
+                        </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-apps"></i><span>App</span></a>
+                                class="fa-solid fa-address-card"></i><span>Employees</span></a>
                         <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/mail-inbox">Email</a></li>
-                            <li><a href="http://127.0.0.1:8000/chat">Chat Apps</a></li>
-                            <li><a href="http://127.0.0.1:8000/events">Calendar</a></li>
-                            <li><a href="http://127.0.0.1:8000/contact">Contact</a></li>
+                            <li><a href="{{ route('employ.index') }}">Index</a></li>
+                            <li><a href="chat">Chat Apps</a></li>
+                            <li><a href="events">Calendar</a></li>
+                            <li><a href="contact">Contact</a></li>
                         </ul>
                     </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-assignment"></i><span>Projects</span></a>
+                                class="fa-solid fa-sitemap"></i><span>Departments</span></a>
                         <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/project-list">Projects List</a></li>
-                            <li><a href="http://127.0.0.1:8000/taskboard">Taskboard</a></li>
-                            <li><a href="http://127.0.0.1:8000/ticket-list">Ticket List</a></li>
-                            <li><a href="http://127.0.0.1:8000/ticket-detail">Ticket Detail</a></li>
-                        </ul>
-                    </li>
-                    <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-folder"></i><span>File
-                                Manager</span></a>
-                        <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/file-dashboard">All File</a></li>
-                            <li><a href="http://127.0.0.1:8000/file-documents">Documents</a></li>
-                            <li><a href="http://127.0.0.1:8000/file-images">Images</a></li>
-                            <li><a href="http://127.0.0.1:8000/file-media">Media</a></li>
+                            <li><a href="{{ route('dep.index') }}">Index</a></li>
+                            <li><a href="file-dashboard">All File</a></li>
+                            <li><a href="file-documents">Documents</a></li>
+                            <li><a href="file-images">Images</a></li>
+                            <li><a href="file-media">Media</a></li>
                         </ul>
                     </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-blogger"></i><span>Blog</span></a>
                         <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/blog-dashboard">Dashboard</a></li>
-                            <li><a href="http://127.0.0.1:8000/blog-post">Blog Post</a></li>
-                            <li><a href="http://127.0.0.1:8000/blog-list">List View</a></li>
-                            <li><a href="http://127.0.0.1:8000/blog-grid">Grid View</a></li>
-                            <li><a href="http://127.0.0.1:8000/blog-details">Blog Details</a></li>
+                            <li><a href="blog-dashboard">Dashboard</a></li>
+                            <li><a href="blog-post">Blog Post</a></li>
+                            <li><a href="blog-list">List View</a></li>
+                            <li><a href="blog-grid">Grid View</a></li>
+                            <li><a href="blog-details">Blog Details</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span></a>
                         <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/ec-dashboard">Dashboard</a></li>
-                            <li><a href="http://127.0.0.1:8000/ec-product">Product</a></li>
-                            <li><a href="http://127.0.0.1:8000/ec-product-List">Product List</a></li>
-                            <li><a href="http://127.0.0.1:8000/ec-product-detail">Product detail</a></li>
+                            <li><a href="ec-dashboard">Dashboard</a></li>
+                            <li><a href="ec-product">Product</a></li>
+                            <li><a href="ec-product-List">Product List</a></li>
+                            <li><a href="ec-product-detail">Product detail</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-swap-alt"></i><span>Components</span></a>
                         <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/ui_kit">Aero UI KIT</a></li>
-                            <li><a href="http://127.0.0.1:8000/alerts">Alerts</a></li>
-                            <li><a href="http://127.0.0.1:8000/collapse">Collapse</a></li>
-                            <li><a href="http://127.0.0.1:8000/colors">Colors</a></li>
-                            <li><a href="http://127.0.0.1:8000/dialogs">Dialogs</a></li>
-                            <li><a href="http://127.0.0.1:8000/list-group">List Group</a></li>
-                            <li><a href="http://127.0.0.1:8000/media-object">Media Object</a></li>
-                            <li><a href="http://127.0.0.1:8000/modals">Modals</a></li>
-                            <li><a href="http://127.0.0.1:8000/notifications">Notifications</a></li>
-                            <li><a href="http://127.0.0.1:8000/progressbars">Progress Bars</a></li>
-                            <li><a href="http://127.0.0.1:8000/range-sliders">Range Sliders</a></li>
-                            <li><a href="http://127.0.0.1:8000/sortable-nestable">Sortable & Nestable</a></li>
-                            <li><a href="http://127.0.0.1:8000/tabs">Tabs</a></li>
-                            <li><a href="http://127.0.0.1:8000/waves">Waves</a></li>
+                            <li><a href="ui_kit">Aero UI KIT</a></li>
+                            <li><a href="alerts">Alerts</a></li>
+                            <li><a href="collapse">Collapse</a></li>
+                            <li><a href="colors">Colors</a></li>
+                            <li><a href="dialogs">Dialogs</a></li>
+                            <li><a href="list-group">List Group</a></li>
+                            <li><a href="media-object">Media Object</a></li>
+                            <li><a href="modals">Modals</a></li>
+                            <li><a href="notifications">Notifications</a></li>
+                            <li><a href="progressbars">Progress Bars</a></li>
+                            <li><a href="range-sliders">Range Sliders</a></li>
+                            <li><a href="sortable-nestable">Sortable & Nestable</a></li>
+                            <li><a href="tabs">Tabs</a></li>
+                            <li><a href="waves">Waves</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-flower"></i><span>Font
                                 Icons</span></a>
                         <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/icons">Material Icons</a></li>
-                            <li><a href="http://127.0.0.1:8000/icons-themify">Themify Icons</a></li>
-                            <li><a href="http://127.0.0.1:8000/icons-weather">Weather Icons</a></li>
+                            <li><a href="icons">Material Icons</a></li>
+                            <li><a href="icons-themify">Themify Icons</a></li>
+                            <li><a href="icons-weather">Weather Icons</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-assignment"></i><span>Forms</span></a>
                         <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/basic-form-elements">Basic Form</a></li>
-                            <li><a href="http://127.0.0.1:8000/advanced-form-elements">Advanced Form</a></li>
-                            <li><a href="http://127.0.0.1:8000/form-examples">Form Examples</a></li>
-                            <li><a href="http://127.0.0.1:8000/form-validation">Form Validation</a></li>
-                            <li><a href="http://127.0.0.1:8000/form-wizard">Form Wizard</a></li>
-                            <li><a href="http://127.0.0.1:8000/form-editors">Editors</a></li>
-                            <li><a href="http://127.0.0.1:8000/form-upload">File Upload</a></li>
-                            <li><a href="http://127.0.0.1:8000/form-summernote">Summernote</a></li>
+                            <li><a href="basic-form-elements">Basic Form</a></li>
+                            <li><a href="advanced-form-elements">Advanced Form</a></li>
+                            <li><a href="form-examples">Form Examples</a></li>
+                            <li><a href="form-validation">Form Validation</a></li>
+                            <li><a href="form-wizard">Form Wizard</a></li>
+                            <li><a href="form-editors">Editors</a></li>
+                            <li><a href="form-upload">File Upload</a></li>
+                            <li><a href="form-summernote">Summernote</a></li>
                         </ul>
                     </li>
                     <li class="active open"><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-grid"></i><span>Tables</span></a>
                         <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/normal-tables">Normal Tables</a></li>
-                            <li class="active"><a href="http://127.0.0.1:8000/jquery-datatable">Jquery Datatables</a>
-                            </li>
-                            <li><a href="http://127.0.0.1:8000/editable-table">Editable Tables</a></li>
-                            <li><a href="http://127.0.0.1:8000/footable">Foo Tables</a></li>
-                            <li><a href="http://127.0.0.1:8000/table-color">Tables Color</a></li>
+                            <li><a href="normal-tables">Normal Tables</a></li>
+                            <li class="active"><a href="jquery-datatable">Jquery Datatables</a></li>
+                            <li><a href="editable-table">Editable Tables</a></li>
+                            <li><a href="footable">Foo Tables</a></li>
+                            <li><a href="table-color">Tables Color</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-chart"></i><span>Charts</span></a>
                         <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/c3">C3 Chart</a></li>
-                            <li><a href="http://127.0.0.1:8000/morris">Morris</a></li>
-                            <li><a href="http://127.0.0.1:8000/flot">Flot</a></li>
-                            <li><a href="http://127.0.0.1:8000/chartjs">ChartJS</a></li>
-                            <li><a href="http://127.0.0.1:8000/sparkline">Sparkline</a></li>
-                            <li><a href="http://127.0.0.1:8000/jquery-knob">Jquery Knob</a></li>
+                            <li><a href="c3">C3 Chart</a></li>
+                            <li><a href="morris">Morris</a></li>
+                            <li><a href="flot">Flot</a></li>
+                            <li><a href="chartjs">ChartJS</a></li>
+                            <li><a href="sparkline">Sparkline</a></li>
+                            <li><a href="jquery-knob">Jquery Knob</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-delicious"></i><span>Widgets</span></a>
                         <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/widgets-app">Apps Widgets</a></li>
-                            <li><a href="http://127.0.0.1:8000/widgets-data">Data Widgets</a></li>
+                            <li><a href="widgets-app">Apps Widgets</a></li>
+                            <li><a href="widgets-data">Data Widgets</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-lock"></i><span>Authentication</span></a>
                         <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/sign-in">Sign In</a></li>
-                            <li><a href="http://127.0.0.1:8000/sign-up">Sign Up</a></li>
-                            <li><a href="http://127.0.0.1:8000/forgot-password">Forgot Password</a></li>
-                            <li><a href="http://127.0.0.1:8000/404">Page 404</a></li>
-                            <li><a href="http://127.0.0.1:8000/500">Page 500</a></li>
-                            <li><a href="http://127.0.0.1:8000/page-offline">Page Offline</a></li>
-                            <li><a href="http://127.0.0.1:8000/locked">Locked Screen</a></li>
+                            <li><a href="sign-in">Sign In</a></li>
+                            <li><a href="sign-up">Sign Up</a></li>
+                            <li><a href="forgot-password">Forgot Password</a></li>
+                            <li><a href="404">Page 404</a></li>
+                            <li><a href="500">Page 500</a></li>
+                            <li><a href="page-offline">Page Offline</a></li>
+                            <li><a href="locked">Locked Screen</a></li>
                         </ul>
                     </li>
                     <li class="open_top"><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-copy"></i><span>Sample Pages</span></a>
                         <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/blank">Blank Page</a></li>
-                            <li><a href="http://127.0.0.1:8000/image-gallery">Image Gallery</a></li>
-                            <li><a href="http://127.0.0.1:8000/profile">Profile</a></li>
-                            <li><a href="http://127.0.0.1:8000/timeline">Timeline</a></li>
-                            <li><a href="http://127.0.0.1:8000/pricing">Pricing</a></li>
-                            <li><a href="http://127.0.0.1:8000/invoices">Invoices</a></li>
-                            <li><a href="http://127.0.0.1:8000/invoices-list">Invoices List</a></li>
-                            <li><a href="http://127.0.0.1:8000/search-results">Search Results</a></li>
+                            <li><a href="blank">Blank Page</a></li>
+                            <li><a href="image-gallery">Image Gallery</a></li>
+                            <li><a href="profile">Profile</a></li>
+                            <li><a href="timeline">Timeline</a></li>
+                            <li><a href="pricing">Pricing</a></li>
+                            <li><a href="invoices">Invoices</a></li>
+                            <li><a href="invoices-list">Invoices List</a></li>
+                            <li><a href="search-results">Search Results</a></li>
                         </ul>
                     </li>
                     <li class="open_top"><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-map"></i><span>Maps</span></a>
                         <ul class="ml-menu">
-                            <li><a href="http://127.0.0.1:8000/google">Google Map</a></li>
-                            <li><a href="http://127.0.0.1:8000/yandex">YandexMap</a></li>
-                            <li><a href="http://127.0.0.1:8000/jvectormap">jVectorMap</a></li>
+                            <li><a href="google">Google Map</a></li>
+                            <li><a href="yandex">YandexMap</a></li>
+                            <li><a href="jvectormap">jVectorMap</a></li>
                         </ul>
                     </li>
                     <li>
@@ -584,8 +575,8 @@
                                 <li class="online">
                                     <a href="javascript:void(0);">
                                         <div class="media">
-                                            <img class="media-object "
-                                                src="{{ asset('assets/images/xs/avatar4.jpg') }} " alt="">
+                                            <img class="media-object " src="assets/images/xs/avatar4.jpg"
+                                                alt="">
                                             <div class="media-body">
                                                 <span class="name">Sophia <small
                                                         class="float-right">11:00AM</small></span>
@@ -600,8 +591,8 @@
                                 <li class="online">
                                     <a href="javascript:void(0);">
                                         <div class="media">
-                                            <img class="media-object "
-                                                src="{{ asset('assets/images/xs/avatar5.jpg') }} " alt="">
+                                            <img class="media-object " src="assets/images/xs/avatar5.jpg"
+                                                alt="">
                                             <div class="media-body">
                                                 <span class="name">Grayson <small
                                                         class="float-right">11:30AM</small></span>
@@ -614,8 +605,8 @@
                                 <li class="offline">
                                     <a href="javascript:void(0);">
                                         <div class="media">
-                                            <img class="media-object "
-                                                src="{{ asset('assets/images/xs/avatar2.jpg') }} " alt="">
+                                            <img class="media-object " src="assets/images/xs/avatar2.jpg"
+                                                alt="">
                                             <div class="media-body">
                                                 <span class="name">Isabella <small
                                                         class="float-right">11:31AM</small></span>
@@ -628,8 +619,8 @@
                                 <li class="me">
                                     <a href="javascript:void(0);">
                                         <div class="media">
-                                            <img class="media-object "
-                                                src="{{ asset('assets/images/xs/avatar1.jpg') }} " alt="">
+                                            <img class="media-object " src="assets/images/xs/avatar1.jpg"
+                                                alt="">
                                             <div class="media-body">
                                                 <span class="name">John <small
                                                         class="float-right">05:00PM</small></span>
@@ -643,8 +634,8 @@
                                 <li class="online">
                                     <a href="javascript:void(0);">
                                         <div class="media">
-                                            <img class="media-object "
-                                                src="{{ asset('assets/images/xs/avatar3.jpg') }} " alt="">
+                                            <img class="media-object " src="assets/images/xs/avatar3.jpg"
+                                                alt="">
                                             <div class="media-body">
                                                 <span class="name">Alexander <small
                                                         class="float-right">06:08PM</small></span>
@@ -667,11 +658,10 @@
                     <div class="col-lg-7 col-md-6 col-sm-12">
                         <h2><strong>DEPARTMENT</strong> DETAILS</h2>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ route('index') }}"><i
-                                        class="zmdi zmdi-home"></i>
+                            <li class="breadcrumb-item"><a href="{{ route('index') }}"><i class="zmdi zmdi-home"></i>
                                     Aero</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('index3') }}">Departments</a></li>
-                            <li class="breadcrumb-item active">Show</li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Departments</a></li>
+                            <li class="breadcrumb-item active">index3</li>
                         </ul>
                         <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
                                 class="zmdi zmdi-sort-amount-desc"></i></button>
@@ -679,28 +669,68 @@
                     <div class="col-lg-5 col-md-6 col-sm-12">
                         <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i
                                 class="zmdi zmdi-arrow-right"></i></button>
-                        <a href="{{ route('employ.create') }}" class="btn btn-success btn-icon float-right"
+                        <a href="{{ route('dep.create') }}" class="btn btn-success btn-icon float-right"
                             type="button"><i class="zmdi zmdi-plus"></i></a>
                     </div>
                 </div>
             </div>
+
             <div class="container-fluid">
                 <div class="row clearfix">
                     <div class="col-lg-12">
                         <div class="card">
-                            <blockquote class="blockquote">
-                                @if ($depts)
-                                    <h5><strong>Id : </strong> {{ $depts->id }}</h5>
-                                    <h5><strong>Name : </strong> {{ $depts->name }}</h5>
-                                    <h5><strong>Email : </strong> {{ $depts->email }}</h5>
-                                    <h5><strong>Phone : </strong> {{ $depts->phone }}</h5>
-                                    <h5><strong>Position : </strong> {{ $depts->position }}</h5>
-                                    <h5><strong>Salary : </strong> {{ $depts->salary }}</h5>
-                                    <h5><strong>Created At : </strong> {{ $depts->created_at }}</h5>
-                                @else
-                                    <p>No Department found.</p>
-                                @endif
-                            </blockquote>
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0 c_list c_table">
+                                    <thead>
+                                        <tr style="border-bottom: 2px solid #dddddd;">
+                                            <th style="border-bottom: 2px solid #dddddd;">ID</th>
+                                            <th style="border-bottom: 2px solid #dddddd;">NAME</th>
+                                            <th style="border-bottom: 2px solid #dddddd;">EMAIL</th>
+                                            <th style="border-bottom: 2px solid #dddddd;">PHONE</th>
+                                            <th style="border-bottom: 2px solid #dddddd;">POSITION</th>
+                                            <th style="border-bottom: 2px solid #dddddd;">SALARY</th>
+                                            <th style="border-bottom: 2px solid #dddddd;">ACTIONS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="t-body-hov-eff">
+                                        @foreach ($depts as $dept)
+                                            <tr>
+                                                <th scope="row">{{ $dept->id }}</th>
+                                                <td>{{ $dept->name }}</td>
+                                                <td>{{ $dept->email }}</td>
+                                                <td>{{ $dept->phone }}</td>
+                                                <td>{{ $dept->position }}</td>
+                                                <td>{{ $dept->salary }}</td>
+                                                <td>
+                                                    <a href="{{ route('dep.show', $dept->id) }}"
+                                                        class="btn btn-warning btn-sm"><i
+                                                            class="fa-solid fa-eye"></i></a>
+                                                    <a href="{{ route('dep.edit', $dept->id) }}"
+                                                        class="btn btn-info btn-sm"><i
+                                                            class="fa-solid fa-pen-to-square"></i></a>
+                                                    <form action="{{ route('dep.destroy', $dept->id) }}"
+                                                        method="POST" style="display:inline-block;">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button id="liveToastShow" type="button"
+                                                            onclick="if(confirm('Are you sure you want to delete this department?')) this.closest('form').submit();"
+                                                            class="btn btn-danger btn-sm">
+                                                            <i class="fa-solid fa-trash"></i>
+                                                        </button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 p-2">
+                                    <div class="d-flex justify-content-end mt-3">
+                                        {{ $depts->links() }}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -708,20 +738,20 @@
     </section>
 
     <!-- Jquery Core Js -->
-    <script src="{{ asset('assets/bundles/libscripts.bundle.js') }} "></script> <!-- Lib Scripts Plugin Js -->
-    <script src="{{ asset('assets/bundles/vendorscripts.bundle.js') }} "></script> <!-- Lib Scripts Plugin Js -->
+    <script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+    <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
 
     <!-- Jquery DataTable Plugin Js -->
-    <script src="{{ asset('assets/bundles/datatablescripts.bundle.js') }} "></script>
-    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js') }} "></script>
-    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js') }} "></script>
-    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js') }} "></script>
-    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.flash.min.js') }} "></script>
-    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons5.min.js') }} "></script>
-    <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.print.min.js') }} "></script>
+    <script src="assets/bundles/datatablescripts.bundle.js"></script>
+    <script src="assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js"></script>
+    <script src="assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js"></script>
+    <script src="assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js"></script>
+    <script src="assets/plugins/jquery-datatable/buttons/buttons.flash.min.js"></script>
+    <script src="assets/plugins/jquery-datatable/buttons/buttons5.min.js"></script>
+    <script src="assets/plugins/jquery-datatable/buttons/buttons.print.min.js"></script>
 
-    <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }} "></script><!-- Custom Js -->
-    <script src="{{ asset('assets/js/pages/tables/jquery-datatable.js') }} "></script>
+    <script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
+
 </body>
 
 

@@ -655,138 +655,157 @@
             </div>
         </aside>
 
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="card">
-                    <!-- Horizontal Layout -->
-                    <div class="row clearfix">
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <div class="card">
-                                <div class="header">
-                                    <h2><strong>DEPARTMENT </strong> ADD</h2>
-                                </div>
-                                <div class="body">
-                                    <form class="form-horizontal" action="{{ route('dep.store') }}" method="POST"
-                                        id="employeeForm">
-                                        @csrf
-                                        <div class="row">
-                                            <div class="col">
-                                                <!-- Success/Error Message Container -->
-                                                @if (session('success'))
-                                                    <div class="alert alert-success alert-dismissible fade show"
-                                                        role="alert">
-                                                        <strong>SUCCESS!</strong> {{ session('success') }}
-                                                        <button type="button" class="close" data-dismiss="alert"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
+        <div class="body-scroll">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-7 col-md-6 col-sm-12">
+                        <h2><strong>DEPARTMENT</strong> ADD</h2>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ route('index') }}"><i
+                                        class="zmdi zmdi-home"></i>
+                                    Aero</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('index3') }}">Departments</a></li>
+                            <li class="breadcrumb-item active">Create</li>
+                        </ul>
+                        <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
+                                class="zmdi zmdi-sort-amount-desc"></i></button>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i
+                                class="zmdi zmdi-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row clearfix">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <!-- Horizontal Layout -->
+                            <div class="row clearfix">
+                                <div class="col-lg-12">
+                                    <div class="card">
+                                        <div class="body">
+                                            <form class="form-horizontal" action="{{ route('dep.store') }}"
+                                                method="POST" id="employeeForm">
+                                                @csrf
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <!-- Success/Error Message Container -->
+                                                        @if (session('success'))
+                                                            <div class="alert alert-success alert-dismissible fade show"
+                                                                role="alert">
+                                                                <strong>SUCCESS!</strong> {{ session('success') }}
+                                                                <button type="button" class="close"
+                                                                    data-dismiss="alert" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                        @endif
+                                                        @if (session('error'))
+                                                            <div class="alert alert-danger alert-dismissible fade show"
+                                                                role="alert">
+                                                                <strong>ERROR!</strong> {{ session('error') }}
+                                                                <button type="button" class="close"
+                                                                    data-dismiss="alert" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                        @endif
                                                     </div>
-                                                @endif
-                                                @if (session('error'))
-                                                    <div class="alert alert-danger alert-dismissible fade show"
-                                                        role="alert">
-                                                        <strong>ERROR!</strong> {{ session('error') }}
-                                                        <button type="button" class="close" data-dismiss="alert"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
+                                                </div>
+                                                <div class="row clearfix">
+                                                    <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                                        <label for="name">Name : </label>
                                                     </div>
-                                                @endif
-                                            </div>
-                                        </div>
-                                        <div class="row clearfix">
-                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                                                <label for="name">Name : </label>
-                                            </div>
-                                            <div class="col-lg-10 col-md-10 col-sm-8">
-                                                <div class="form-group">
-                                                    <input type="text" name="name" id="name"
-                                                        class="form-control @error('name') is-invalid @enderror"
-                                                        placeholder="Enter your Name" required>
-                                                    @error('name')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                    @enderror
+                                                    <div class="col-lg-10 col-md-6">
+                                                        <div class="form-group">
+                                                            <input type="text" name="name" id="name"
+                                                                class="form-control @error('name') is-invalid @enderror"
+                                                                placeholder="Enter your Name" required>
+                                                            @error('name')
+                                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="row clearfix">
-                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                                                <label for="email">Email : </label>
-                                            </div>
-                                            <div class="col-lg-10 col-md-10 col-sm-8">
-                                                <div class="form-group">
-                                                    <input type="email" name="email" id="email"
-                                                        class="form-control @error('email') is-invalid @enderror"
-                                                        placeholder="Enter your Email" required>
-                                                    @error('email')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                    @enderror
+                                                <div class="row clearfix">
+                                                    <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                                        <label for="email">Email : </label>
+                                                    </div>
+                                                    <div class="col-lg-10 col-md-6">
+                                                        <div class="form-group">
+                                                            <input type="email" name="email" id="email"
+                                                                class="form-control @error('email') is-invalid @enderror"
+                                                                placeholder="Enter your Email" required>
+                                                            @error('email')
+                                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="row clearfix">
-                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                                                <label for="phone">Phone : </label>
-                                            </div>
-                                            <div class="col-lg-10 col-md-10 col-sm-8">
-                                                <div class="form-group">
-                                                    <input type="text" name="phone" id="phone"
-                                                        class="form-control @error('phone') is-invalid @enderror"
-                                                        placeholder="Enter your Phone" required>
-                                                    @error('phone')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                    @enderror
+                                                <div class="row clearfix">
+                                                    <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                                        <label for="phone">Phone : </label>
+                                                    </div>
+                                                    <div class="col-lg-10 col-md-6">
+                                                        <div class="form-group">
+                                                            <input type="text" name="phone" id="phone"
+                                                                class="form-control @error('phone') is-invalid @enderror"
+                                                                placeholder="Enter your Phone" required>
+                                                            @error('phone')
+                                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="row clearfix">
-                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                                                <label for="position">Position : </label>
-                                            </div>
-                                            <div class="col-lg-10 col-md-10 col-sm-8">
-                                                <div class="form-group">
-                                                    <input type="text" name="position" id="position"
-                                                        class="form-control @error('position') is-invalid @enderror"
-                                                        placeholder="Enter your Position" required>
-                                                    @error('position')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                    @enderror
+                                                <div class="row clearfix">
+                                                    <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                                        <label for="position">Position : </label>
+                                                    </div>
+                                                    <div class="col-lg-10 col-md-6">
+                                                        <div class="form-group">
+                                                            <input type="text" name="position" id="position"
+                                                                class="form-control @error('position') is-invalid @enderror"
+                                                                placeholder="Enter your Position" required>
+                                                            @error('position')
+                                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="row clearfix">
-                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                                                <label for="salary">Salary : </label>
-                                            </div>
-                                            <div class="col-lg-10 col-md-10 col-sm-8">
-                                                <div class="form-group">
-                                                    <input type="text" name="salary" id="salary"
-                                                        class="form-control @error('salary') is-invalid @enderror"
-                                                        placeholder="Enter your Salary" required>
-                                                    @error('salary')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                    @enderror
+                                                <div class="row clearfix">
+                                                    <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                                        <label for="salary">Salary : </label>
+                                                    </div>
+                                                    <div class="col-lg-10 col-md-6">
+                                                        <div class="form-group">
+                                                            <input type="text" name="salary" id="salary"
+                                                                class="form-control @error('salary') is-invalid @enderror"
+                                                                placeholder="Enter your Salary" required>
+                                                            @error('salary')
+                                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="col-sm-12 offset-sm-2">
-                                            <button type="submit"
-                                                class="btn btn-raised btn-primary btn-round waves-effect">ADD</button>
+                                                <div class="col-sm-12 offset-sm-2">
+                                                    <button type="submit"
+                                                        class="btn btn-raised btn-primary btn-round waves-effect">ADD</button>
+                                                </div>
+                                            </form>
                                         </div>
-                                    </form>
-
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
     </section>
 
 

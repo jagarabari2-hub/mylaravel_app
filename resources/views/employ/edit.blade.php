@@ -662,122 +662,130 @@
             </div>
         </aside>
 
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="card">
-                    <!-- Horizontal Layout -->
-                    <div class="row clearfix">
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <div class="card">
-                                <div class="header">
-                                    <h2><strong>Employees </strong> EDIT</h2>
-                                    {{-- <ul class="header-dropdown">
-                                        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle"
-                                                data-toggle="dropdown" role="button" aria-haspopup="true"
-                                                aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li><a href="javascript:void(0);">Action</a></li>
-                                                <li><a href="javascript:void(0);">Another action</a></li>
-                                                <li><a href="javascript:void(0);">Something else</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="remove">
-                                            <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                                        </li>
-                                    </ul> --}}
-                                </div>
-                                <div class="body">
-                                    <form class="form-horizontal" action="{{ route('employ.update', $employs->id) }}"
-                                        method="POST" id="employeeForm">
-                                        @csrf
-                                        @method('PUT')
-                                        <div class="row">
-                                            <div class="col">
-                                                <!-- Success/Error Message Container -->
-                                                @if (session('success'))
-                                                    <div class="alert alert-success alert-dismissible fade show"
-                                                        role="alert">
-                                                        <strong>SUCCESS!</strong> {{ session('success') }}
-                                                        <button type="button" class="close" data-dismiss="alert"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
+        <div class="body-scroll">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-7 col-md-6 col-sm-12">
+                        <h2><strong>EMPLOYEES</strong> EDIT</h2>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ route('index') }}"><i
+                                        class="zmdi zmdi-home"></i>
+                                    Aero</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('index2') }}">Employees</a></li>
+                            <li class="breadcrumb-item active">Edit</li>
+                        </ul>
+                        <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
+                                class="zmdi zmdi-sort-amount-desc"></i></button>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i
+                                class="zmdi zmdi-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row clearfix">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <!-- Horizontal Layout -->
+                            <div class="row clearfix">
+                                <div class="col-lg-12">
+                                    <div class="card">
+                                        <div class="body">
+                                            <form class="form-horizontal"
+                                                action="{{ route('employ.update', $employs->id) }}" method="POST"
+                                                id="employeeForm">
+                                                @csrf
+                                                @method('PUT')
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <!-- Success/Error Message Container -->
+                                                        @if (session('success'))
+                                                            <div class="alert alert-success alert-dismissible fade show"
+                                                                role="alert">
+                                                                <strong>SUCCESS!</strong> {{ session('success') }}
+                                                                <button type="button" class="close"
+                                                                    data-dismiss="alert" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                        @endif
+                                                        @if (session('error'))
+                                                            <div class="alert alert-danger alert-dismissible fade show"
+                                                                role="alert">
+                                                                <strong>ERROR!</strong> {{ session('error') }}
+                                                                <button type="button" class="close"
+                                                                    data-dismiss="alert" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                        @endif
                                                     </div>
-                                                @endif
-                                                @if (session('error'))
-                                                    <div class="alert alert-danger alert-dismissible fade show"
-                                                        role="alert">
-                                                        <strong>ERROR!</strong> {{ session('error') }}
-                                                        <button type="button" class="close" data-dismiss="alert"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
+                                                </div>
+                                                <div class="row clearfix">
+                                                    <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                                        <label for="name">Name : </label>
                                                     </div>
-                                                @endif
-                                            </div>
-                                        </div>
-                                        <div class="row clearfix">
-                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                                                <label for="name">Name : </label>
-                                            </div>
-                                            <div class="col-lg-10 col-md-10 col-sm-8">
-                                                <div class="form-group">
-                                                    <input type="text" name="name" id="name"
-                                                        class="form-control @error('name') is-invalid @enderror"
-                                                        value="{{ old('name', $employs->name) }}"
-                                                        placeholder="Enter your Name" required>
-                                                    @error('name')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                    @enderror
+                                                    <div class="col-lg-10 col-md-10 col-sm-8">
+                                                        <div class="form-group">
+                                                            <input type="text" name="name" id="name"
+                                                                class="form-control @error('name') is-invalid @enderror"
+                                                                value="{{ old('name', $employs->name) }}"
+                                                                placeholder="Enter your Name" required>
+                                                            @error('name')
+                                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="row clearfix">
-                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                                                <label for="dep">Department : </label>
-                                            </div>
-                                            <div class="col-lg-10 col-md-10 col-sm-8">
-                                                <div class="form-group">
-                                                    <input type="text" name="depart" id="dep"
-                                                        class="form-control @error('depart') is-invalid @enderror"
-                                                        value="{{ old('depart', $employs->depart) }}"
-                                                        placeholder="Enter your Department" required>
-                                                    @error('depart')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                    @enderror
+                                                <div class="row clearfix">
+                                                    <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                                        <label for="dep">Department : </label>
+                                                    </div>
+                                                    <div class="col-lg-10 col-md-10 col-sm-8">
+                                                        <div class="form-group">
+                                                            <input type="text" name="depart" id="dep"
+                                                                class="form-control @error('depart') is-invalid @enderror"
+                                                                value="{{ old('depart', $employs->depart) }}"
+                                                                placeholder="Enter your Department" required>
+                                                            @error('depart')
+                                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="row clearfix">
-                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                                                <label for="phone">Phone : </label>
-                                            </div>
-                                            <div class="col-lg-10 col-md-10 col-sm-8">
-                                                <div class="form-group">
-                                                    <input type="text" name="phone" id="phone"
-                                                        class="form-control @error('phone') is-invalid @enderror"
-                                                        value="{{ old('phone', $employs->phone) }}"
-                                                        placeholder="Enter your Phone" required>
-                                                    @error('phone')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                    @enderror
+                                                <div class="row clearfix">
+                                                    <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                                        <label for="phone">Phone : </label>
+                                                    </div>
+                                                    <div class="col-lg-10 col-md-10 col-sm-8">
+                                                        <div class="form-group">
+                                                            <input type="text" name="phone" id="phone"
+                                                                class="form-control @error('phone') is-invalid @enderror"
+                                                                value="{{ old('phone', $employs->phone) }}"
+                                                                placeholder="Enter your Phone" required>
+                                                            @error('phone')
+                                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 offset-sm-2">
-                                            <input type="submit" class="btn btn-primary" value="EDIT">
-                                        </div>
-                                    </form>
+                                                <div class="col-sm-12 offset-sm-2">
+                                                    <input type="submit" class="btn btn-primary" value="EDIT">
+                                                </div>
+                                            </form>
 
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Jquery Core Js -->

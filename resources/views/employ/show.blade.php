@@ -661,38 +661,44 @@
             </div>
         </aside>
 
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="card">
-                    <div class="header">
+        <div class="body-scroll">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-7 col-md-6 col-sm-12">
                         <h2><strong>EMPLOYEES</strong> DETAILS</h2>
-                        <ul class="header-dropdown">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle"
-                                    data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                            <li class="remove">
-                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                            </li>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ route('index') }}"><i
+                                        class="zmdi zmdi-home"></i>
+                                    Aero</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('index2') }}">Employees</a></li>
+                            <li class="breadcrumb-item active">Show</li>
                         </ul>
+                        <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
+                                class="zmdi zmdi-sort-amount-desc"></i></button>
                     </div>
-                    @if ($employs)
-                        <h5><strong>Id : </strong> {{ $employs->id }}</h5>
-                        <h5><strong>Name : </strong> {{ $employs->name }}</h5>
-                        <h5><strong>Department : </strong> {{ $employs->depart }}</h5>
-                        <h5><strong>Phone No : </strong> {{ $employs->phone }}</h5>
-                    @else
-                        <p>No employee found.</p>
-                    @endif
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i
+                                class="zmdi zmdi-arrow-right"></i></button>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <blockquote class="blockquote">
+                            @if ($employs)
+                                <h5><strong>Id : </strong> {{ $employs->id }}</h5>
+                                <h5><strong>Name : </strong> {{ $employs->name }}</h5>
+                                <h5><strong>Department : </strong> {{ $employs->depart }}</h5>
+                                <h5><strong>Phone No : </strong> {{ $employs->phone }}</h5>
+                            @else
+                                <p>No employee found.</p>
+                            @endif
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <!-- Jquery Core Js -->

@@ -5,21 +5,23 @@ namespace App\Http\Controllers;
 use App\Models\Employs;
 use App\Models\Depts;
 use App\Models\Logs;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class EmploysController extends Controller
 {
     public function employ()
     {
-        return view('employ.index');
+        $employs = Employs::Paginate(10);
+        return view('employ.index', compact('employs'));
     }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $employs = Employs::all();
-
+        $employs = Employs::Paginate(10);
         return view('index2', compact('employs'));
     }
 

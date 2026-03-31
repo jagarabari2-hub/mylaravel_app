@@ -11,12 +11,12 @@ use Illuminate\Http\Request;
 
 class LogsController extends Controller
 {
-    public function normal_tables()
+    public function login()
     {
-        $logs = Logs::all();
+        $logs = Logs::paginate(10);
 
         // Pass the logs and user count to the view
-        return view('normal-tables', compact('logs'));
+        return view('logs.index', compact('logs'));
     }
 
     public function welcome()

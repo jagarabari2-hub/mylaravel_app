@@ -4,15 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Models\Depts;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DeptsController extends Controller
 {
+    public function depts() 
+    {
+        $depts = Depts::paginate(10);
+        return view('dep.index', compact('depts'));
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $depts = Depts::all();
+        $depts = Depts::paginate(10);
         return view('index3', compact('depts'));
     }
 

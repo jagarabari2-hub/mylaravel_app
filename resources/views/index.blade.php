@@ -300,29 +300,29 @@
                 </li>
                 <li class="active open"><a href="index"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
                 </li>
-                <li><a href="javascript:void(0);" class="menu-toggle"><i
-                            class="fa-solid fa-address-card"></i><span>Employees</span></a>
-                    <ul class="ml-menu">
-                        <li><a href="{{ route('index2') }}">Index</a></li>
-                        <li><a href="chat">Chat Apps</a></li>
-                        <li><a href="events">Calendar</a></li>
-                        <li><a href="contact">Contact</a></li>
-                    </ul>
-                </li>
                 <li> <a href="javascript:void(0);" class="menu-toggle"><i
                             class="fa-solid fa-users"></i><span>Users</span></a>
                     <ul class="ml-menu">
-                        <li><a href="normal-tables">Index</a></li>
+                        <li><a href="{{ route('logs.index') }}">Index</a></li>
                         <li><a href="project-list">Projects List</a></li>
                         <li><a href="taskboard">Taskboard</a></li>
                         <li><a href="ticket-list">Ticket List</a></li>
                         <li><a href="ticket-detail">Ticket Detail</a></li>
                     </ul>
                 </li>
+                <li><a href="javascript:void(0);" class="menu-toggle"><i
+                            class="fa-solid fa-address-card"></i><span>Employees</span></a>
+                    <ul class="ml-menu">
+                        <li><a href="{{ route('employ.index') }}">Index</a></li>
+                        <li><a href="chat">Chat Apps</a></li>
+                        <li><a href="events">Calendar</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </li>
                 <li> <a href="javascript:void(0);" class="menu-toggle"><i
                             class="fa-solid fa-sitemap"></i><span>Departments</span></a>
                     <ul class="ml-menu">
-                        <li><a href="{{ route('index3') }}">Index3</a></li>
+                        <li><a href="{{ route('dep.index') }}">Index</a></li>
                         <li><a href="file-dashboard">All File</a></li>
                         <li><a href="file-documents">Documents</a></li>
                         <li><a href="file-images">Images</a></li>

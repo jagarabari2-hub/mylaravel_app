@@ -18,11 +18,14 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
     {{-- Icons link And Others Links --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+    {{-- Icons link And Others Links --}}
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 </head>
 
 <body class="theme-blush">
 
-    <section class="content">
+    <section class="content contact">
         <!-- Page Loader -->
         <div class="page-loader-wrapper">
             <div class="loader">
@@ -302,15 +305,6 @@
                         </div>
                     </li>
                     <li><a href="index"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="fa-solid fa-address-card"></i><span>Employees</span></a>
-                        <ul class="ml-menu">
-                            <li><a href="{{ route('index2') }}">Index2</a></li>
-                            <li><a href="chat">Chat Apps</a></li>
-                            <li><a href="events">Calendar</a></li>
-                            <li><a href="contact">Contact</a></li>
-                        </ul>
-                    </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="fa-solid fa-users"></i><span>Users</span></a>
                         <ul class="ml-menu">
@@ -318,6 +312,15 @@
                             <li><a href="taskboard">Taskboard</a></li>
                             <li><a href="ticket-list">Ticket List</a></li>
                             <li><a href="ticket-detail">Ticket Detail</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);" class="menu-toggle"><i
+                                class="fa-solid fa-address-card"></i><span>Employees</span></a>
+                        <ul class="ml-menu">
+                            <li><a href="{{ route('index2') }}">Index2</a></li>
+                            <li><a href="chat">Chat Apps</a></li>
+                            <li><a href="events">Calendar</a></li>
+                            <li><a href="contact">Contact</a></li>
                         </ul>
                     </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
@@ -649,75 +652,89 @@
             </div>
         </aside>
 
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="card">
-                    <div class="header">
+        <div class="body-scroll">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-7 col-md-6 col-sm-12">
                         <h2><strong>DEPARTMENT</strong> DETAILS</h2>
-                        <ul class="header-dropdown">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle"
-                                    data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="{{ route('dep.create') }}">ADD</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else</a></li>
-                                </ul>
-                            </li>
-                            <li class="remove">
-                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                            </li>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ route('index') }}"><i class="zmdi zmdi-home"></i>
+                                    Aero</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Departments</a></li>
+                            <li class="breadcrumb-item active">index3</li>
                         </ul>
+                        <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
+                                class="zmdi zmdi-sort-amount-desc"></i></button>
                     </div>
-                    <div class="body">
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>NAME</th>
-                                        <th>EMAIL</th>
-                                        <th>PHONE</th>
-                                        <th>POSITION</th>
-                                        <th>SALARY</th>
-                                        <th>ACTIONS</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($depts as $dept)
-                                        <tr>
-                                            <th scope="row">{{ $dept->id }}</th>
-                                            <td>{{ $dept->name }}</td>
-                                            <td>{{ $dept->email }}</td>
-                                            <td>{{ $dept->phone }}</td>
-                                            <td>{{ $dept->position }}</td>
-                                            <td>{{ $dept->salary }}</td>
-                                            <td>
-                                                <a href="{{ route('dep.show', $dept->id) }}"
-                                                    class="btn btn-warning">VIEW</a>
-                                                <a href="{{ route('dep.edit', $dept->id) }}"
-                                                    class="btn btn-info">EDIT</a>
-                                                <form action="{{ route('dep.destroy', $dept->id) }}" method="POST"
-                                                    style="display:inline-block;">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button id="liveToastShow" type="button"
-                                                        onclick="if(confirm('Are you sure you want to delete this department?')) this.closest('form').submit();"
-                                                        class="btn btn-danger">
-                                                        Delete
-                                                    </button>
-                                                </form>
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i
+                                class="zmdi zmdi-arrow-right"></i></button>
+                        <a href="{{ route('dep.create') }}" class="btn btn-success btn-icon float-right"
+                            type="button"><i class="zmdi zmdi-plus"></i></a>
+                    </div>
+                </div>
+            </div>
 
-                                            </td>
+            <div class="container-fluid">
+                <div class="row clearfix">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0 c_list c_table">
+                                    <thead>
+                                        <tr style="border-bottom: 2px solid #dddddd;">
+                                            <th style="border-bottom: 2px solid #dddddd;">ID</th>
+                                            <th style="border-bottom: 2px solid #dddddd;">NAME</th>
+                                            <th style="border-bottom: 2px solid #dddddd;">EMAIL</th>
+                                            <th style="border-bottom: 2px solid #dddddd;">PHONE</th>
+                                            <th style="border-bottom: 2px solid #dddddd;">POSITION</th>
+                                            <th style="border-bottom: 2px solid #dddddd;">SALARY</th>
+                                            <th style="border-bottom: 2px solid #dddddd;">ACTIONS</th>
                                         </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody class="t-body-hov-eff">
+                                        @foreach ($depts as $dept)
+                                            <tr>
+                                                <th scope="row">{{ $dept->id }}</th>
+                                                <td>{{ $dept->name }}</td>
+                                                <td>{{ $dept->email }}</td>
+                                                <td>{{ $dept->phone }}</td>
+                                                <td>{{ $dept->position }}</td>
+                                                <td>{{ $dept->salary }}</td>
+                                                <td>
+                                                    <a href="{{ route('dep.show', $dept->id) }}"
+                                                        class="btn btn-warning btn-sm"><i
+                                                            class="fa-solid fa-eye"></i></a>
+                                                    <a href="{{ route('dep.edit', $dept->id) }}"
+                                                        class="btn btn-info btn-sm"><i
+                                                            class="fa-solid fa-pen-to-square"></i></a>
+                                                    <form action="{{ route('dep.destroy', $dept->id) }}"
+                                                        method="POST" style="display:inline-block;">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button id="liveToastShow" type="button"
+                                                            onclick="if(confirm('Are you sure you want to delete this department?')) this.closest('form').submit();"
+                                                            class="btn btn-danger btn-sm">
+                                                            <i class="fa-solid fa-trash"></i>
+                                                        </button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 p-2">
+                                    <div class="d-flex justify-content-end mt-3">
+                                        {{ $depts->links() }}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Jquery Core Js -->

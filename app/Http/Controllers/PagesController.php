@@ -17,11 +17,17 @@ class PagesController extends Controller
      */
     public function showPage($page)
     {
+        if ($page == 'normal-tables') {
+            $logs = Logs::paginate(10);
+            return view($page, compact('logs'));
+        }
+
         $data = [
             'depts' => Depts::all(),
             'employs' => Employs::all(),
             'logs' => Logs::all(),
         ];
+
 
         if (view()->exists($page)) {
             return view($page, $data);
