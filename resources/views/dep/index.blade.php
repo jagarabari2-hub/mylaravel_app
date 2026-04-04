@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-    <title>:: Aero Bootstrap4 Admin :: INDEX3</title>
+    <title>:: Aero Bootstrap4 Admin :: Departments</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Favicon-->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
@@ -27,13 +27,6 @@
 
     <section class="content contact">
         <!-- Page Loader -->
-        <div class="page-loader-wrapper">
-            <div class="loader">
-                <div class="m-t-30"><img class="zmdi-hc-spin" src="assets/images/loader.svg" width="48"
-                        height="48" alt="Aero"></div>
-                <p>Please wait...</p>
-            </div>
-        </div>
 
         <!-- Overlay For Sidebars -->
         <div class="overlay"></div>
@@ -661,7 +654,7 @@
                             <li class="breadcrumb-item"><a href="{{ route('index') }}"><i class="zmdi zmdi-home"></i>
                                     Aero</a></li>
                             <li class="breadcrumb-item"><a href="javascript:void(0);">Departments</a></li>
-                            <li class="breadcrumb-item active">index3</li>
+                            <li class="breadcrumb-item active">Index</li>
                         </ul>
                         <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
                                 class="zmdi zmdi-sort-amount-desc"></i></button>

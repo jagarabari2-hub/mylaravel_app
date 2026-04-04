@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-    <title>:: Aero Bootstrap4 Admin :: Jquery DataTables</title>
+    <title>:: Aero Bootstrap4 Admin :: Employees</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Favicon-->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
@@ -301,41 +301,41 @@
                     <li><a href="index"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="bi bi-people-fill"></i><span>Users</span></a>
-                        {{-- <ul class="ml-menu"> --}}
-                    <li><a href="http://127.0.0.1:8000/logs">Index</a></li>
-                    <li><a href="taskboard">Taskboard</a></li>
-                    <li><a href="ticket-list">Ticket List</a></li>
-                    <li><a href="ticket-detail">Ticket Detail</a></li>
-                    {{-- </ul> --}}
+                        <ul class="ml-menu">
+                            <li><a href="{{ route('logs.index') }}">Index</a></li>
+                            <li><a href="taskboard">Taskboard</a></li>
+                            <li><a href="ticket-list">Ticket List</a></li>
+                            <li><a href="ticket-detail">Ticket Detail</a></li>
+                        </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="bi bi-person-workspace"></i><span>Employees</span></a>
-                        {{-- <ul class="ml-menu"> --}}
-                    <li><a href="http://127.0.0.1:8000/employ">Index</a></li>
-                    <li><a href="chat">Chat Apps</a></li>
-                    <li><a href="events">Calendar</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    {{-- </ul> --}}
+                        <ul class="ml-menu">
+                            <li><a href="{{ route('employ.index') }}">Index</a></li>
+                            <li><a href="chat">Chat Apps</a></li>
+                            <li><a href="events">Calendar</a></li>
+                            <li><a href="contact">Contact</a></li>
+                        </ul>
                     </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="fa-solid fa-sitemap"></i><span>Departments</span></a>
-                        {{-- <ul class="ml-menu"> --}}
-                    <li><a href="http://127.0.0.1:8000/dep">Index</a></li>+
-                    <li><a href="file-dashboard">All File</a></li>
-                    <li><a href="file-documents">Documents</a></li>
-                    <li><a href="file-images">Images</a></li>
-                    <li><a href="file-media">Media</a></li>
-                    {{-- </ul> --}}
+                        <ul class="ml-menu">
+                            <li><a href="{{ route('dep.index') }}">Index</a></li>
+                            <li><a href="file-dashboard">All File</a></li>
+                            <li><a href="file-documents">Documents</a></li>
+                            <li><a href="file-images">Images</a></li>
+                            <li><a href="file-media">Media</a></li>
+                        </ul>
                     </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-blogger"></i><span>Blog</span></a>
-                        {{-- <ul class="ml-menu"> --}}
-                    <li><a href="blog-dashboard">Dashboard</a></li>
-                    <li><a href="blog-post">Blog Post</a></li>
-                    <li><a href="blog-list">List View</a></li>
-                    <li><a href="blog-grid">Grid View</a></li>
-                    <li><a href="blog-details">Blog Details</a></li>
-                    {{-- </ul> --}}
+                        <ul class="ml-menu">
+                            <li><a href="blog-dashboard">Dashboard</a></li>
+                            <li><a href="blog-post">Blog Post</a></li>
+                            <li><a href="blog-list">List View</a></li>
+                            <li><a href="blog-grid">Grid View</a></li>
+                            <li><a href="blog-details">Blog Details</a></li>
+                        </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span></a>
@@ -655,7 +655,7 @@
                             <li class="breadcrumb-item"><a href="{{ route('index') }}"><i class="zmdi zmdi-home"></i>
                                     Aero</a></li>
                             <li class="breadcrumb-item"><a href="javascript:void(0);">Employees</a></li>
-                            <li class="breadcrumb-item active">index2</li>
+                            <li class="breadcrumb-item active">Index</li>
                         </ul>
                         <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
                                 class="zmdi zmdi-sort-amount-desc"></i></button>

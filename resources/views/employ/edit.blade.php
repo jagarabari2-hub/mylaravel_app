@@ -664,7 +664,7 @@
                             <li class="breadcrumb-item"><a href="{{ route('index') }}"><i
                                         class="zmdi zmdi-home"></i>
                                     Aero</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('index2') }}">Employees</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('employ.index') }}">Employees</a></li>
                             <li class="breadcrumb-item active">Edit</li>
                         </ul>
                         <button class="btn btn-primary btn-icon mobile_menu" type="button"><i

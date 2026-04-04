@@ -25,8 +25,7 @@ Route::post('/signup', [LogsController::class, 'signlog'])->name('signlog');
 // All Resource Log route
 Route::resource('logs', LogsController::class);
 
-// http://127.0.0.1/logs
-//logs index page route
+// http://127.0.0.1/logs   logs index page route
 Route::get('/logs', [LogsController::class, 'login'])->name('logs.index');
 
 // Handle login form submission
@@ -55,17 +54,11 @@ Route::resource('employ', EmploysController::class);
 // Employs page index route
 Route::get('/employ', [EmploysController::class, 'employ'])->name('employ.index');
 
-// Custom route for index2 if needed
-Route::get('/index2', [EmploysController::class, 'index'])->name('index2');
-
 // Route For DeptsController And Pages http://127.0.0.1:8000/dep/index
 Route::resource('dep', DeptsController::class); // Handles all CRUD operations for 'dep'
 
-// http://127.0.0.1:8000/depts
-// Department Page index Route
-Route::get('/depts', [DeptsController::class, 'depts'])->name('dep.index');
-
-Route::get('/index3', [DeptsController::class, 'index'])->name('index3');
+// http://127.0.0.1:8000/depts    Department Page index Route
+Route::get('/dep', [DeptsController::class, 'depts'])->name('dep.index');
 
 // All Route For Entire Template Files
 Route::get('/{page}', [PagesController::class, 'showPage'])->where('page', '[a-zA-Z0-9\-]+')->name('page');
