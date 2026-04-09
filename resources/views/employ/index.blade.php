@@ -1,7 +1,6 @@
 <!doctype html>
 <html class="no-js " lang="en">
 
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -9,7 +8,6 @@
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
     <title>:: Aero Bootstrap4 Admin :: Employees</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Favicon-->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <!-- JQuery DataTable Css -->
@@ -17,9 +15,6 @@
     <!-- Custom Css -->
     <link rel="stylesheet" href="assets/css/style.min.css">
     {{-- Icons link And Others Links --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    {{-- Icons link And Others Links --}}
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 </head>
 
@@ -298,18 +293,21 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="index"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+                    <li class="active open"><a href="index"><i
+                                class="zmdi zmdi-home"></i><span>Dashboard</span></a>
+                    </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
-                                class="bi bi-people-fill"></i><span>Users</span></a>
+                                class="fa-solid fa-users"></i><span>Users</span></a>
                         <ul class="ml-menu">
                             <li><a href="{{ route('logs.index') }}">Index</a></li>
+                            <li><a href="project-list">Projects List</a></li>
                             <li><a href="taskboard">Taskboard</a></li>
                             <li><a href="ticket-list">Ticket List</a></li>
                             <li><a href="ticket-detail">Ticket Detail</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                class="bi bi-person-workspace"></i><span>Employees</span></a>
+                                class="fa-solid fa-address-card"></i><span>Employees</span></a>
                         <ul class="ml-menu">
                             <li><a href="{{ route('employ.index') }}">Index</a></li>
                             <li><a href="chat">Chat Apps</a></li>
@@ -386,11 +384,11 @@
                             <li><a href="form-summernote">Summernote</a></li>
                         </ul>
                     </li>
-                    <li class="active open"><a href="javascript:void(0);" class="menu-toggle"><i
+                    <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-grid"></i><span>Tables</span></a>
                         <ul class="ml-menu">
                             <li><a href="normal-tables">Normal Tables</a></li>
-                            <li class="active"><a href="jquery-datatable">Jquery Datatables</a></li>
+                            <li><a href="jquery-datatable">Jquery Datatables</a></li>
                             <li><a href="editable-table">Editable Tables</a></li>
                             <li><a href="footable">Foo Tables</a></li>
                             <li><a href="table-color">Tables Color</a></li>
@@ -735,16 +733,36 @@
     <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.print.min.js') }}"></script>
     <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }}"></script><!-- Custom Js -->
     <script src="{{ asset('assets/js/pages/tables/jquery-datatable.js') }}"></script>
+    <!-- jQuery Script to toggle the submenus -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        window.onload = function() {
-            var loader = document.getElementById("loading");
-            if (loader) {
-                loader.style.display = "none";
-            }
-        };
-    </script>
-
-</body>
+        < script >
+            window.onload = function() {
+                var loader = document.getElementById("loading");
+                if (loader) {
+                    loader.style.display = "none";
+                }
+            };
 
 
-</html>
+        $(document).ready(function() {
+            // Toggle the submenu when clicking on a menu item with class 'menu-toggle'
+            $('.menu-toggle').on('click', function(e) {
+                // Prevent default anchor click behavior
+                e.preventDefault();
+
+                // Find the submenu (ul) that is associated with the clicked item
+                $(this).next('.ml-menu').slideToggle();
+
+                // Optional: Close all other submenus if you want only one open at a time
+                $('.ml-menu').not($(this).next()).slideUp();
+            });
+        }); <
+        />
+
+        <
+        /body>
+
+
+        <
+        /html>

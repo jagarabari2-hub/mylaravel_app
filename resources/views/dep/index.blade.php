@@ -18,9 +18,6 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
     {{-- Icons link And Others Links --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
-    {{-- Icons link And Others Links --}}
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 </head>
 
 <body class="theme-blush">
