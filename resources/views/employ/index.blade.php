@@ -731,38 +731,21 @@
     <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.flash.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons5.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('assets/bundles/libscripts.bundle.js') }}"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
     <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }}"></script><!-- Custom Js -->
+    <script src="{{ asset('assets/js/pages/index.js') }}"></script>
     <script src="{{ asset('assets/js/pages/tables/jquery-datatable.js') }}"></script>
-    <!-- jQuery Script to toggle the submenus -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        < script >
+        <script>
             window.onload = function() {
                 var loader = document.getElementById("loading");
                 if (loader) {
                     loader.style.display = "none";
                 }
             };
+        </script>
 
+       
 
-        $(document).ready(function() {
-            // Toggle the submenu when clicking on a menu item with class 'menu-toggle'
-            $('.menu-toggle').on('click', function(e) {
-                // Prevent default anchor click behavior
-                e.preventDefault();
-
-                // Find the submenu (ul) that is associated with the clicked item
-                $(this).next('.ml-menu').slideToggle();
-
-                // Optional: Close all other submenus if you want only one open at a time
-                $('.ml-menu').not($(this).next()).slideUp();
-            });
-        }); <
-        />
-
-        <
-        /body>
-
-
-        <
-        /html>
+</body> 
+</html>

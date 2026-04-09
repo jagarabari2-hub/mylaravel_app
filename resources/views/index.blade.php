@@ -330,9 +330,10 @@
                     </ul>
                 </li>
                 <li> <a href="javascript:void(0);" class="menu-toggle"><i
-                            class="zmdi zmdi-blogger"></i><span>Blog</span></a>
+                            class="fa-solid fa-id-card"></i><span>Employees Details</span></a>
                     <ul class="ml-menu">
-                        <li><a href="blog-dashboard">Dashboard</a></li>
+                        <li><a href="{{ route('empdtl.index') }}">Index</a></li>
+                        <li><a href="blog-dashboard">Blog</a></li>
                         <li><a href="blog-post">Blog Post</a></li>
                         <li><a href="blog-list">List View</a></li>
                         <li><a href="blog-grid">Grid View</a></li>

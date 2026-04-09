@@ -1,15 +1,13 @@
 <!doctype html>
 <html class="no-js " lang="en">
 
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-    <title>:: Aero Bootstrap4 Admin :: Departments</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>:: Aero Bootstrap4 Admin :: Employees</title>
     <!-- Favicon-->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <!-- JQuery DataTable Css -->
@@ -23,6 +21,7 @@
 <body class="theme-blush">
 
     <section class="content contact">
+
         <!-- Page Loader -->
 
         <!-- Overlay For Sidebars -->
@@ -294,11 +293,14 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="index"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+                    <li class="active open"><a href="index"><i
+                                class="zmdi zmdi-home"></i><span>Dashboard</span></a>
+                    </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="fa-solid fa-users"></i><span>Users</span></a>
                         <ul class="ml-menu">
                             <li><a href="{{ route('logs.index') }}">Index</a></li>
+                            <li><a href="project-list">Projects List</a></li>
                             <li><a href="taskboard">Taskboard</a></li>
                             <li><a href="ticket-list">Ticket List</a></li>
                             <li><a href="ticket-detail">Ticket Detail</a></li>
@@ -382,11 +384,11 @@
                             <li><a href="form-summernote">Summernote</a></li>
                         </ul>
                     </li>
-                    <li class="active open"><a href="javascript:void(0);" class="menu-toggle"><i
+                    <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-grid"></i><span>Tables</span></a>
                         <ul class="ml-menu">
                             <li><a href="normal-tables">Normal Tables</a></li>
-                            <li class="active"><a href="jquery-datatable">Jquery Datatables</a></li>
+                            <li><a href="jquery-datatable">Jquery Datatables</a></li>
                             <li><a href="editable-table">Editable Tables</a></li>
                             <li><a href="footable">Foo Tables</a></li>
                             <li><a href="table-color">Tables Color</a></li>
@@ -646,11 +648,11 @@
             <div class="block-header">
                 <div class="row">
                     <div class="col-lg-7 col-md-6 col-sm-12">
-                        <h2><strong>DEPARTMENT</strong> DETAILS</h2>
+                        <h2><strong>EMPLOYEES</strong> DETAILS</h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('index') }}"><i class="zmdi zmdi-home"></i>
                                     Aero</a></li>
-                            <li class="breadcrumb-item"><a href="javascript:void(0);">Departments</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Employees</a></li>
                             <li class="breadcrumb-item active">Index</li>
                         </ul>
                         <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
@@ -659,12 +661,11 @@
                     <div class="col-lg-5 col-md-6 col-sm-12">
                         <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i
                                 class="zmdi zmdi-arrow-right"></i></button>
-                        <a href="{{ route('dep.create') }}" class="btn btn-success btn-icon float-right"
-                            type="button"><i class="zmdi zmdi-plus"></i></a>
+                        <a href="#" class="btn btn-success btn-icon float-right" type="button"><i
+                                class="zmdi zmdi-plus"></i></a>
                     </div>
                 </div>
             </div>
-
             <div class="container-fluid">
                 <div class="row clearfix">
                     <div class="col-lg-12">
@@ -673,37 +674,31 @@
                                 <table class="table table-hover mb-0 c_list c_table">
                                     <thead>
                                         <tr style="border-bottom: 2px solid #dddddd;">
-                                            <th style="border-bottom: 2px solid #dddddd;">ID</th>
-                                            <th style="border-bottom: 2px solid #dddddd;">NAME</th>
-                                            <th style="border-bottom: 2px solid #dddddd;">EMAIL</th>
-                                            <th style="border-bottom: 2px solid #dddddd;">PHONE</th>
-                                            <th style="border-bottom: 2px solid #dddddd;">POSITION</th>
-                                            <th style="border-bottom: 2px solid #dddddd;">SALARY</th>
+
+                                            <th style="border-bottom: 2px solid #dddddd">ID
+                                            </th>
+                                            <th style="border-bottom: 2px solid #dddddd">NAME
+                                            </th>
                                             <th style="border-bottom: 2px solid #dddddd;">ACTIONS</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="t-body-hov-eff">
-                                        @foreach ($depts as $dept)
+                                    <tbody>
+                                        @foreach ($employs as $employ)
                                             <tr>
-                                                <th scope="row">{{ $dept->id }}</th>
-                                                <td>{{ $dept->name }}</td>
-                                                <td>{{ $dept->email }}</td>
-                                                <td>{{ $dept->phone }}</td>
-                                                <td>{{ $dept->position }}</td>
-                                                <td>{{ $dept->salary }}</td>
+                                                <td>{{ $employ->id }}</td>
+                                                <td>{{ $employ->name }}</td>
                                                 <td>
-                                                    <a href="{{ route('dep.show', $dept->id) }}"
+                                                    <a href="{{ route('empdtl.show', $employ->id) }}"
                                                         class="btn btn-warning btn-sm"><i
                                                             class="fa-solid fa-eye"></i></a>
-                                                    <a href="{{ route('dep.edit', $dept->id) }}"
-                                                        class="btn btn-info btn-sm"><i
+                                                    <a href="#" class="btn btn-info btn-sm"><i
                                                             class="fa-solid fa-pen-to-square"></i></a>
-                                                    <form action="{{ route('dep.destroy', $dept->id) }}"
-                                                        method="POST" style="display:inline-block;">
+                                                    <form action="#" method="POST"
+                                                        style="display:inline-block;">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button id="liveToastShow" type="button"
-                                                            onclick="if(confirm('Are you sure you want to delete this department?')) this.closest('form').submit();"
+                                                        <button type="button"
+                                                            onclick="if(confirm('Are you sure you want to delete this employee?')) this.closest('form').submit();"
                                                             class="btn btn-danger btn-sm">
                                                             <i class="fa-solid fa-trash"></i>
                                                         </button>
@@ -717,7 +712,7 @@
                             <div class="row">
                                 <div class="col-sm-12 p-2">
                                     <div class="d-flex justify-content-end mt-3">
-                                        {{ $depts->links() }}
+
                                     </div>
                                 </div>
                             </div>
@@ -736,17 +731,13 @@
     <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.print.min.js') }}"></script>
     <script src="{{ asset('assets/bundles/libscripts.bundle.js') }}"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
     <script src="{{ asset('assets/bundles/mainscripts.bundle.js') }}"></script><!-- Custom Js -->
+    <script src="{{ asset('assets/js/pages/index.js') }}"></script>
     <script src="{{ asset('assets/js/pages/tables/jquery-datatable.js') }}"></script>
-    <script>
-        window.onload = function() {
-            var loader = document.getElementById("loading");
-            if (loader) {
-                loader.style.display = "none";
-            }
-        };
-    </script>
+
+       
+
+
 
 </body>
-
 
 </html>

@@ -4,6 +4,7 @@ use App\Http\Controllers\LogsController;
 use App\Http\Controllers\EmploysController;
 use App\Http\Controllers\DeptsController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\EmpdtlController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,6 +50,9 @@ Route::get('/index', [LogsController::class, 'index'])->name('index');
 // For all debugging and Test route http://127.0.0.1:8000/test
 
 Route::resource('employ', EmploysController::class);
+
+//empdtl page route 
+Route::resource('empdtl', EmpdtlController::class);
 
 // http://127.0.0.1:8000/employ
 // Employs page index route
