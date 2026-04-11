@@ -48,4 +48,11 @@ class EmpdtlController extends Controller
 
         return redirect()->route('empdtl.index')->with('success', 'Updated successfully');
     }
+
+    public function destroy(Depts $depts, Employs $employs, $id)
+    {
+        $depts->destroy($id);
+        $employs->destroy($id);
+        return redirect()->route('empdtl.index')->with('success', 'Department Delete Successfully');
+    }
 }

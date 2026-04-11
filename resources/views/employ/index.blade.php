@@ -696,14 +696,15 @@
                                                         class="btn btn-info btn-sm"><i
                                                             class="fa-solid fa-pen-to-square"></i></a>
                                                     <form action="{{ route('employ.destroy', $employ->id) }}"
-                                                        method="POST" style="display:inline-block;">
+                                                        method="POST" class="deleteForm" style="display:inline-block;">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="button"
-                                                            onclick="if(confirm('Are you sure you want to delete this employee?')) this.closest('form').submit();"
-                                                            class="btn btn-danger btn-sm">
-                                                            <i class="fa-solid fa-trash"></i>
-                                                        </button>
+                                                            <button type="button"
+                                                                class="btn btn-danger btn-sm deleteBtn"
+                                                                data-toggle="modal"
+                                                                data-target="#deleteModal">
+                                                                <i class="fa-solid fa-trash"></i>
+                                                            </button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -724,6 +725,34 @@
             </div>
     </section>
 
+            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content shadow-lg">
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title mb-3">
+                                <i class="fa-solid fa-trash"></i> Confirm Delete
+                            </h5>
+                            <button type="button" class="close text-white" data-dismiss="modal">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <i class="zmdi zmdi-alert-circle text-danger" style="font-size: 60px;"></i>
+                            <h5 class="mt-3">Delete this employee?</h5>
+                            <p class="text-muted">This action cannot be undone.</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" id="confirmDelete" class="btn btn-danger">
+                                Yes, Delete
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     <script src="{{ asset('assets/bundles/datatablescripts.bundle.js') }}"></script>
     <script src="{{ asset('assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js') }}"></script>
@@ -736,14 +765,18 @@
     <script src="{{ asset('assets/js/pages/index.js') }}"></script>
     <script src="{{ asset('assets/js/pages/tables/jquery-datatable.js') }}"></script>
     <script>
-        <script>
-            window.onload = function() {
-                var loader = document.getElementById("loading");
-                if (loader) {
-                    loader.style.display = "none";
-                }
-            };
-        </script>
+        let formToSubmit;
+
+        $('.deleteBtn').on('click', function () {
+            formToSubmit = $(this).closest('form');
+        });
+
+        $('#confirmDelete').on('click', function () {
+            if (formToSubmit) {
+                formToSubmit.submit();
+            }
+        });       
+    </script>
 
        
 
