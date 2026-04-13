@@ -17990,7 +17990,8 @@ section.content {
     border-right-color: #313131;
 }
 .theme-dark .cbp_tmtimeline > li .cbp_tmtime {
-    background: .theme-dark .cbp_tmtimeline > li .cbp_tmtime;
+    background: #4f46e5;
+    color: #fff;
 }
 .theme-dark .cbp_tmtimeline > li .cbp_tmicon {
     box-shadow: none;
