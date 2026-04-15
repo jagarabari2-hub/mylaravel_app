@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
-    <title>:: Aero Bootstrap4 Admin :: Home</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
+    <title>:: Aero Bootstrap4 Admin :: EMS</title>
+    <link rel="icon" href="ems.ico" type="image/x-icon"> <!-- Favicon-->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css" />
     <link rel="stylesheet" href="assets/plugins/charts-c3/plugin.css" />
@@ -281,11 +281,12 @@
     </div>
 
     <!-- Left Sidebar -->
+    {{-- img src assets/images/logo.svg --}}
     <aside id="leftsidebar" class="sidebar">
         <div class="navbar-brand">
             <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-            <a href="index"><img src="assets/images/logo.svg" width="25" alt="Aero"><span
-                    class="m-l-10">Aero</span></a>
+            <a href="index"><img src="assets/images/emsl.png" width="60" alt="Aero"><span
+                    class="m-l-10">EMS</span></a>
         </div>
         <div class="menu">
             <ul class="list">
@@ -674,7 +675,7 @@
                         <h2>Dashboard</h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index"><i class="zmdi zmdi-home"></i>
-                                    Aero</a>
+                                    EMS</a>
                             </li>
                             <li class="breadcrumb-item active">Dashboard 1</li>
                         </ul>

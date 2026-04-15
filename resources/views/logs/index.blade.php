@@ -275,8 +275,8 @@
         <aside id="leftsidebar" class="sidebar">
             <div class="navbar-brand">
                 <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-                <a href="index"><img src="assets/images/logo.svg" width="25" alt="Aero"><span
-                        class="m-l-10">Aero</span></a>
+                <a href="index"><img src="assets/images/emsl.png" width="60" alt="Aero"><span
+                        class="m-l-10">EMS</span></a>
             </div>
             <div class="menu">
                 <ul class="list">
@@ -291,7 +291,7 @@
                         </div>
                     </li>
                     <li><a href="index"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
-                    <li> <a href="javascript:void(0);" class="menu-toggle"><i
+                    <li class="active"> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="fa-solid fa-users"></i><span>Users</span></a>
                         <ul class="ml-menu">
                             <li><a href="{{ route('logs.index') }}">Index</a></li>
@@ -320,9 +320,10 @@
                         </ul>
                     </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-blogger"></i><span>Blog</span></a>
+                                class="fa-solid fa-id-card"></i><span>Employees Details</span></a>
                         <ul class="ml-menu">
-                            <li><a href="blog-dashboard">Dashboard</a></li>
+                            <li><a href="{{ route('empdtl.index') }}">Index</a></li>
+                            <li><a href="blog-dashboard">Blog</a></li>
                             <li><a href="blog-post">Blog Post</a></li>
                             <li><a href="blog-list">List View</a></li>
                             <li><a href="blog-grid">Grid View</a></li>
@@ -645,7 +646,7 @@
                         <h2><strong>LOGIN</strong> DETAILS</h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('index') }}"><i class="zmdi zmdi-home"></i>
-                                    Aero</a></li>
+                                    EMS</a></li>
                             <li class="breadcrumb-item"><a href="javascript:void(0);">Logins</a></li>
                             <li class="breadcrumb-item active">Index</li>
                         </ul>

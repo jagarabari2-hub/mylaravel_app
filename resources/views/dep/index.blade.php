@@ -279,8 +279,8 @@
         <aside id="leftsidebar" class="sidebar">
             <div class="navbar-brand">
                 <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-                <a href="index"><img src="assets/images/logo.svg" width="25" alt="Aero"><span
-                        class="m-l-10">Aero</span></a>
+                <a href="index"><img src="assets/images/emsl.png" width="60" alt="Aero"><span
+                        class="m-l-10">EMS</span></a>
             </div>
             <div class="menu">
                 <ul class="list">
@@ -313,7 +313,7 @@
                             <li><a href="contact">Contact</a></li>
                         </ul>
                     </li>
-                    <li> <a href="javascript:void(0);" class="menu-toggle"><i
+                    <li class="active"> <a href="javascript:void(0);" class="menu-toggle"><i
                                 class="fa-solid fa-sitemap"></i><span>Departments</span></a>
                         <ul class="ml-menu">
                             <li><a href="{{ route('dep.index') }}">Index</a></li>
@@ -649,7 +649,7 @@
                         <h2><strong>DEPARTMENT</strong> DETAILS</h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('index') }}"><i class="zmdi zmdi-home"></i>
-                                    Aero</a></li>
+                                    EMS</a></li>
                             <li class="breadcrumb-item"><a href="javascript:void(0);">Departments</a></li>
                             <li class="breadcrumb-item active">Index</li>
                         </ul>

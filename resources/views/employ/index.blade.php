@@ -278,8 +278,8 @@
         <aside id="leftsidebar" class="sidebar">
             <div class="navbar-brand">
                 <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-                <a href="index"><img src="assets/images/logo.svg" width="25" alt="Aero"><span
-                        class="m-l-10">Aero</span></a>
+                <a href="index"><img src="assets/images/emsl.png" width="60" alt="Aero"><span
+                        class="m-l-10">EMS</span></a>
             </div>
             <div class="menu">
                 <ul class="list">
@@ -293,7 +293,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="active open"><a href="index"><i
+                    <li><a href="index"><i
                                 class="zmdi zmdi-home"></i><span>Dashboard</span></a>
                     </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
@@ -306,7 +306,7 @@
                             <li><a href="ticket-detail">Ticket Detail</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i
+                    <li class="active"><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="fa-solid fa-address-card"></i><span>Employees</span></a>
                         <ul class="ml-menu">
                             <li><a href="{{ route('employ.index') }}">Index</a></li>
@@ -326,15 +326,16 @@
                         </ul>
                     </li>
                     <li> <a href="javascript:void(0);" class="menu-toggle"><i
-                                class="zmdi zmdi-blogger"></i><span>Blog</span></a>
-                        <ul class="ml-menu">
-                            <li><a href="blog-dashboard">Dashboard</a></li>
-                            <li><a href="blog-post">Blog Post</a></li>
-                            <li><a href="blog-list">List View</a></li>
-                            <li><a href="blog-grid">Grid View</a></li>
-                            <li><a href="blog-details">Blog Details</a></li>
-                        </ul>
-                    </li>
+                            class="fa-solid fa-id-card"></i><span>Employees Details</span></a>
+                    <ul class="ml-menu">
+                        <li><a href="{{ route('empdtl.index') }}">Index</a></li>
+                        <li><a href="blog-dashboard">Blog</a></li>
+                        <li><a href="blog-post">Blog Post</a></li>
+                        <li><a href="blog-list">List View</a></li>
+                        <li><a href="blog-grid">Grid View</a></li>
+                        <li><a href="blog-details">Blog Details</a></li>
+                    </ul>
+                </li>
                     <li><a href="javascript:void(0);" class="menu-toggle"><i
                                 class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span></a>
                         <ul class="ml-menu">
@@ -651,7 +652,7 @@
                         <h2><strong>EMPLOYEES</strong> DETAILS</h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('index') }}"><i class="zmdi zmdi-home"></i>
-                                    Aero</a></li>
+                                    EMS</a></li>
                             <li class="breadcrumb-item"><a href="javascript:void(0);">Employees</a></li>
                             <li class="breadcrumb-item active">Index</li>
                         </ul>
