@@ -78,7 +78,7 @@ class EmploysController extends Controller
         $employ->depart = $request->depart;
         $employ->phone = $request->phone;
 
-        $employ->save(); // ⚠️ MUST HAVE THIS
+        $employ->save(); 
 
         return redirect()->route('employ.index')->with('success', 'Updated successfully');
     }   
